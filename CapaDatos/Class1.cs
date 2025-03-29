@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using System.Microsoft.data.sqlclient;
+using Microsoft.SqlServer.Server;
 
 namespace CapaDatos
 {
