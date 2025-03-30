@@ -121,7 +121,7 @@
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAD8ISURBVHhe7d0H
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAD8ISURBVHhe7d0H
         XNT5nf9xN3WTbNpl73K55J/cXe4ul36XzV3KJZtNNm0vl7JJNtma7G427lqwKzZ0lCogiB0RELCiWLFg
         o/dhZphhAOmIIk1RQex+/4/fbxwYvjZ+PwaYgdfz8Xg99h7/xz8f4kZ8zyDMjBsHAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -393,10 +393,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIx2/x/M+lhCXOsexQAAAABJ
         RU5ErkJggg==
 </value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>La DDR4 32GB 5600 MHz es un módulo de RAM con 32 GB de capacidad
-y 5600 MHz de velocidad, proporcionando un alto rendimiento,
-para tareas exigentes como edición de video, renderizado 3D y juegos en alta calidad.</value>
   </data>
 </root>
