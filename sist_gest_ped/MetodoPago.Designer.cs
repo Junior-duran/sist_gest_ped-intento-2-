@@ -38,6 +38,7 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -133,11 +134,24 @@
             button1.Text = "CONFIRMAR";
             button1.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.White;
+            button2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.Blue;
+            button2.Location = new Point(122, 421);
+            button2.Name = "button2";
+            button2.Size = new Size(165, 31);
+            button2.TabIndex = 13;
+            button2.Text = "VOLVER";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // MetodoPago
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(428, 525);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
@@ -168,5 +182,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private Button button1;
+        private Button button2;
     }
 }
