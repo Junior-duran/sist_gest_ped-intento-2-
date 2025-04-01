@@ -44,11 +44,11 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(12, 289);
+            label3.Location = new Point(97, 316);
             label3.Name = "label3";
-            label3.Size = new Size(605, 57);
+            label3.Size = new Size(432, 76);
             label3.TabIndex = 28;
-            label3.Text = "SSD M.2 NVMe Samsung con interfaz PCIe Gen3 x4, velocidades de lectura hasta 3500 MB/s y \r\nescritura hasta 3000 MB/s. Perfecto para usuarios que requieren alto rendimiento en transferencia \r\nde datos.";
+            label3.Text = resources.GetString("label3.Text");
             label3.Click += label3_Click;
             // 
             // button3
@@ -56,9 +56,9 @@
             button3.BackColor = Color.FromArgb(128, 255, 255);
             button3.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.Fuchsia;
-            button3.Location = new Point(351, 374);
+            button3.Location = new Point(333, 424);
             button3.Name = "button3";
-            button3.Size = new Size(124, 34);
+            button3.Size = new Size(124, 39);
             button3.TabIndex = 29;
             button3.Text = "Volver";
             button3.UseVisualStyleBackColor = false;
@@ -68,19 +68,19 @@
             button2.BackColor = Color.FromArgb(255, 128, 255);
             button2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(161, 374);
+            button2.Location = new Point(161, 424);
             button2.Name = "button2";
-            button2.Size = new Size(125, 34);
+            button2.Size = new Size(125, 39);
             button2.TabIndex = 30;
             button2.Text = "Agregar ";
             button2.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.SSD_SAMSUNG;
-            pictureBox1.Location = new Point(197, 50);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(206, 54);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(236, 204);
+            pictureBox1.Size = new Size(236, 231);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 31;
             pictureBox1.TabStop = false;
@@ -88,9 +88,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(526, 12);
+            pictureBox2.Location = new Point(510, 14);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(85, 40);
+            pictureBox2.Size = new Size(85, 45);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 32;
             pictureBox2.TabStop = false;
@@ -100,7 +100,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Fuchsia;
-            label7.Location = new Point(486, 55);
+            label7.Location = new Point(486, 62);
             label7.Name = "label7";
             label7.Size = new Size(125, 19);
             label7.TabIndex = 33;
@@ -111,7 +111,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(206, 235);
+            label1.Location = new Point(206, 266);
             label1.Name = "label1";
             label1.Size = new Size(216, 19);
             label1.TabIndex = 34;
@@ -119,9 +119,9 @@
             // 
             // ProductoEscogido11
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(623, 450);
+            ClientSize = new Size(623, 510);
             Controls.Add(label1);
             Controls.Add(label7);
             Controls.Add(pictureBox2);

@@ -39,25 +39,25 @@
             // 
             // mtb_Usuario
             // 
-            mtb_Usuario.Location = new Point(153, 364);
+            mtb_Usuario.Location = new Point(134, 417);
             mtb_Usuario.Name = "mtb_Usuario";
-            mtb_Usuario.Size = new Size(196, 23);
+            mtb_Usuario.Size = new Size(224, 25);
             mtb_Usuario.TabIndex = 0;
             mtb_Usuario.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
             // mtb_Password
             // 
-            mtb_Password.Location = new Point(153, 411);
+            mtb_Password.Location = new Point(134, 494);
             mtb_Password.Name = "mtb_Password";
-            mtb_Password.Size = new Size(196, 23);
+            mtb_Password.Size = new Size(224, 25);
             mtb_Password.TabIndex = 1;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = CapaPresentacion.cs.Properties.Resources._5087579;
-            pictureBox1.Location = new Point(100, 100);
+            pictureBox1.Location = new Point(109, 123);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(249, 212);
+            pictureBox1.Size = new Size(249, 240);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -65,18 +65,22 @@
             // lbl_usuario
             // 
             lbl_usuario.AutoSize = true;
-            lbl_usuario.Location = new Point(100, 372);
+            lbl_usuario.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_usuario.ForeColor = Color.FromArgb(255, 128, 255);
+            lbl_usuario.Location = new Point(72, 423);
             lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new Size(47, 15);
+            lbl_usuario.Size = new Size(56, 19);
             lbl_usuario.TabIndex = 3;
             lbl_usuario.Text = "Usuario";
             // 
             // lbl_Password
             // 
             lbl_Password.AutoSize = true;
-            lbl_Password.Location = new Point(100, 419);
+            lbl_Password.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_Password.ForeColor = Color.FromArgb(255, 128, 255);
+            lbl_Password.Location = new Point(59, 494);
             lbl_Password.Name = "lbl_Password";
-            lbl_Password.Size = new Size(57, 15);
+            lbl_Password.Size = new Size(69, 19);
             lbl_Password.TabIndex = 4;
             lbl_Password.Text = "Password";
             // 
@@ -84,18 +88,18 @@
             // 
             btn_Login.Font = new Font("Constantia", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Login.ForeColor = Color.FromArgb(255, 128, 255);
-            btn_Login.Location = new Point(134, 528);
+            btn_Login.Location = new Point(149, 601);
             btn_Login.Name = "btn_Login";
-            btn_Login.Size = new Size(183, 56);
+            btn_Login.Size = new Size(183, 63);
             btn_Login.TabIndex = 5;
             btn_Login.Text = "Login";
             btn_Login.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(456, 698);
+            ClientSize = new Size(456, 749);
             Controls.Add(btn_Login);
             Controls.Add(lbl_Password);
             Controls.Add(lbl_usuario);

@@ -45,7 +45,7 @@
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(440, 12);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(85, 40);
+            pictureBox2.Size = new Size(85, 45);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 42;
             pictureBox2.TabStop = false;
@@ -55,7 +55,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.Fuchsia;
-            label7.Location = new Point(400, 55);
+            label7.Location = new Point(423, 60);
             label7.Name = "label7";
             label7.Size = new Size(125, 19);
             label7.TabIndex = 43;
@@ -66,9 +66,9 @@
             button3.BackColor = Color.FromArgb(128, 255, 255);
             button3.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.Fuchsia;
-            button3.Location = new Point(287, 392);
+            button3.Location = new Point(287, 444);
             button3.Name = "button3";
-            button3.Size = new Size(124, 34);
+            button3.Size = new Size(124, 39);
             button3.TabIndex = 46;
             button3.Text = "Volver";
             button3.UseVisualStyleBackColor = false;
@@ -78,9 +78,9 @@
             button2.BackColor = Color.FromArgb(255, 128, 255);
             button2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(97, 392);
+            button2.Location = new Point(108, 444);
             button2.Name = "button2";
-            button2.Size = new Size(125, 34);
+            button2.Size = new Size(125, 39);
             button2.TabIndex = 47;
             button2.Text = "Agregar ";
             button2.UseVisualStyleBackColor = false;
@@ -89,7 +89,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(52, 304);
+            label3.Location = new Point(71, 348);
             label3.Name = "label3";
             label3.Size = new Size(426, 57);
             label3.TabIndex = 48;
@@ -100,7 +100,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(160, 273);
+            label1.Location = new Point(182, 310);
             label1.Name = "label1";
             label1.Size = new Size(179, 19);
             label1.TabIndex = 49;
@@ -109,19 +109,19 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.bibipin;
-            pictureBox1.Location = new Point(134, 35);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(134, 40);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(260, 225);
+            pictureBox1.Size = new Size(260, 255);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 50;
             pictureBox1.TabStop = false;
             // 
             // ProductoEscogido16
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(531, 450);
+            ClientSize = new Size(551, 510);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(label3);
