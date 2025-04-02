@@ -37,7 +37,7 @@ namespace sist_gest_ped
                 if (reader.Read())
                 {
                     MessageBox.Show("Login Exitoso", "Sistema");
-                    Form2 principal = new Form2();
+                    Menu2 principal = new Menu2();
                     principal.Show();
                     this.Hide();
                 }
