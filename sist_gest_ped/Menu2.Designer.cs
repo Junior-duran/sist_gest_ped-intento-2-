@@ -37,7 +37,6 @@
             btn_Accesorios = new Button();
             panel1 = new Panel();
             button7 = new Button();
-            button8 = new Button();
             button9 = new Button();
             btn_Dispositivo = new Button();
             panelMediaSubMenu = new Panel();
@@ -48,12 +47,14 @@
             btn_Media = new Button();
             panelLogo = new Panel();
             pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             panelSideMenu.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             panelMediaSubMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panelSideMenu
@@ -80,7 +81,7 @@
             btn_Acerca_de.FlatAppearance.BorderSize = 0;
             btn_Acerca_de.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Acerca_de.ForeColor = Color.Blue;
-            btn_Acerca_de.Location = new Point(0, 618);
+            btn_Acerca_de.Location = new Point(0, 576);
             btn_Acerca_de.Name = "btn_Acerca_de";
             btn_Acerca_de.Padding = new Padding(10, 0, 0, 0);
             btn_Acerca_de.Size = new Size(233, 45);
@@ -95,7 +96,7 @@
             panel2.Controls.Add(button12);
             panel2.Controls.Add(button13);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 525);
+            panel2.Location = new Point(0, 483);
             panel2.Name = "panel2";
             panel2.Size = new Size(233, 93);
             panel2.TabIndex = 6;
@@ -138,7 +139,7 @@
             btn_Accesorios.FlatAppearance.BorderSize = 0;
             btn_Accesorios.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Accesorios.ForeColor = Color.Blue;
-            btn_Accesorios.Location = new Point(0, 480);
+            btn_Accesorios.Location = new Point(0, 438);
             btn_Accesorios.Name = "btn_Accesorios";
             btn_Accesorios.Padding = new Padding(10, 0, 0, 0);
             btn_Accesorios.Size = new Size(233, 45);
@@ -151,12 +152,11 @@
             // 
             panel1.BackColor = Color.FromArgb(255, 192, 255);
             panel1.Controls.Add(button7);
-            panel1.Controls.Add(button8);
             panel1.Controls.Add(button9);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 352);
             panel1.Name = "panel1";
-            panel1.Size = new Size(233, 128);
+            panel1.Size = new Size(233, 86);
             panel1.TabIndex = 4;
             // 
             // button7
@@ -166,7 +166,7 @@
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button7.ForeColor = Color.Blue;
-            button7.Location = new Point(0, 80);
+            button7.Location = new Point(0, 40);
             button7.Name = "button7";
             button7.Padding = new Padding(35, 0, 0, 0);
             button7.Size = new Size(233, 40);
@@ -174,22 +174,6 @@
             button7.Text = "TELEFONOS";
             button7.TextAlign = ContentAlignment.MiddleLeft;
             button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            button8.Dock = DockStyle.Top;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button8.ForeColor = Color.Blue;
-            button8.Location = new Point(0, 40);
-            button8.Name = "button8";
-            button8.Padding = new Padding(35, 0, 0, 0);
-            button8.Size = new Size(233, 40);
-            button8.TabIndex = 1;
-            button8.Text = "MONITORES";
-            button8.TextAlign = ContentAlignment.MiddleLeft;
-            button8.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
@@ -334,11 +318,24 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(388, 82);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(403, 398);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
             // Menu2
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(934, 561);
+            Controls.Add(pictureBox2);
             Controls.Add(panelSideMenu);
             DoubleBuffered = true;
             MinimumSize = new Size(950, 600);
@@ -350,6 +347,7 @@
             panelMediaSubMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -365,7 +363,6 @@
         private Button button2;
         private Panel panel1;
         private Button button7;
-        private Button button8;
         private Button button9;
         private Button btn_Dispositivo;
         private Button btn_Acerca_de;
@@ -374,5 +371,6 @@
         private Button button13;
         private Button btn_Accesorios;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }

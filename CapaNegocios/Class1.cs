@@ -8,6 +8,9 @@ using CapaDatos;
 
 namespace CapaNegocios
 {
-   
+  interface Login
+    {
+        void Login();
+    }
 
 }

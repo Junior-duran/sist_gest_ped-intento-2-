@@ -65,30 +65,30 @@
             // lbl_usuario
             // 
             lbl_usuario.AutoSize = true;
-            lbl_usuario.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_usuario.ForeColor = Color.FromArgb(255, 128, 255);
+            lbl_usuario.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_usuario.ForeColor = Color.Fuchsia;
             lbl_usuario.Location = new Point(72, 423);
             lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new Size(56, 19);
+            lbl_usuario.Size = new Size(61, 19);
             lbl_usuario.TabIndex = 3;
             lbl_usuario.Text = "Usuario";
             // 
             // lbl_Password
             // 
             lbl_Password.AutoSize = true;
-            lbl_Password.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_Password.ForeColor = Color.FromArgb(255, 128, 255);
+            lbl_Password.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_Password.ForeColor = Color.Fuchsia;
             lbl_Password.Location = new Point(59, 494);
             lbl_Password.Name = "lbl_Password";
-            lbl_Password.Size = new Size(69, 19);
+            lbl_Password.Size = new Size(72, 19);
             lbl_Password.TabIndex = 4;
             lbl_Password.Text = "Password";
             // 
             // btn_Login
             // 
             btn_Login.Font = new Font("Constantia", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Login.ForeColor = Color.FromArgb(255, 128, 255);
-            btn_Login.Location = new Point(149, 601);
+            btn_Login.ForeColor = Color.Fuchsia;
+            btn_Login.Location = new Point(134, 584);
             btn_Login.Name = "btn_Login";
             btn_Login.Size = new Size(183, 63);
             btn_Login.TabIndex = 5;

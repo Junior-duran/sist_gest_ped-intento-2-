@@ -40,6 +40,7 @@ namespace sist_gest_ped
                     Menu2 principal = new Menu2();
                     principal.Show();
                     this.Hide();
+
                 }
                 else
                 {
