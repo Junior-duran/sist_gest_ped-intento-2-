@@ -25,13 +25,13 @@ namespace CapaPresentacion.cs
 
         private void btn_menu_Click(object sender, EventArgs e)
         {
-            if (btn_Menus.Visible==true)
+            if (btn_menu.Visible==true)
             {
-                panel_menus.Visble = false;
+                panel1.Visible = false;
             }
             else
             {
-                panel_menus.Visible = true;
+                panel1.Visible = true;
             }
         }
     }
