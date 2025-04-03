@@ -75,5 +75,11 @@ namespace CapaPresentacion.cs
             openChildForm(new Producto_Bocina());
             hideSubMenu();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Producto_CPU());
+            hideSubMenu();
+        }
     }
 }

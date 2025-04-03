@@ -8,9 +8,9 @@ using CapaDatos;
 
 namespace CapaNegocios
 {
-  interface Login
-    {
-        void Login();
-    }
-
+        public interface IEntidad
+        {
+            int Id { get; set; } // Id común para todas las entidades
+            string Nombre { get; set; } // Nombre común
+        }
 }

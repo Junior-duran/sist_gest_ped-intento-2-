@@ -284,6 +284,7 @@
             button1.Text = "CPU";
             button1.TextAlign = ContentAlignment.MiddleLeft;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // btn_Media
             // 
