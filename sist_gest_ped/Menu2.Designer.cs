@@ -116,6 +116,7 @@
             button12.Text = "BOCINAS";
             button12.TextAlign = ContentAlignment.MiddleLeft;
             button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
             // 
             // button13
             // 
@@ -132,6 +133,7 @@
             button13.Text = "AUDIFONOS";
             button13.TextAlign = ContentAlignment.MiddleLeft;
             button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
             // 
             // btn_Accesorios
             // 
@@ -311,7 +313,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-7, 18);
+            pictureBox1.Location = new Point(-24, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(257, 82);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;

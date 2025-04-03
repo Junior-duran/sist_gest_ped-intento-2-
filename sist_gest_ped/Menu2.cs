@@ -22,7 +22,7 @@ namespace CapaPresentacion.cs
             panel1.Visible = false;
             panelMediaSubMenu.Visible = false;
             panelSideMenu.Visible = false;
-           
+
         }
         private void hideSubMenu()
         {
@@ -48,6 +48,32 @@ namespace CapaPresentacion.cs
         {
             showSubMenu(panelMediaSubMenu);
         }
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel1.Controls.Add(childForm);
+            panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
+        private void button13_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Producto_Audifonos());
+
+            hideSubMenu();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Producto_Bocina());
+            hideSubMenu();
+        }
     }
 }
