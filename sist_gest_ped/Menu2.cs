@@ -19,9 +19,9 @@ namespace CapaPresentacion.cs
         }
         private void custimizarDiseño()
         {
-            panel1.Visible = false;
-            panelMediaSubMenu.Visible = false;
-            panelSideMenu.Visible = false;
+            panel1.Visible = true;
+            panelMediaSubMenu.Visible = true;
+            panelSideMenu.Visible = true;
 
         }
         private void hideSubMenu()
@@ -53,33 +53,38 @@ namespace CapaPresentacion.cs
         {
             if (activeForm != null)
                 activeForm.Close();
+
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
+
+            panel1.Visible = true; // Asegurar que el panel esté visible
+            panel1.Controls.Clear(); // Limpiar cualquier contenido anterior
             panel1.Controls.Add(childForm);
             panel1.Tag = childForm;
             childForm.BringToFront();
-            childForm.Show();
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            openChildForm(new Producto_Audifonos());
-
-            hideSubMenu();
+            Producto_Audifonos form = new Producto_Audifonos();
+            form.Show();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            openChildForm(new Producto_Bocina());
-            hideSubMenu();
+
+                Producto_Bocina form = new Producto_Bocina();
+                form.Show();
+           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openChildForm(new Producto_CPU());
-            hideSubMenu();
+            Producto_CPU form = new Producto_CPU();
+            form.Show();
         }
     }
 }
