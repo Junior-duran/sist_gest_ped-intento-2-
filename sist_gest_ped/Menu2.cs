@@ -75,15 +75,51 @@ namespace CapaPresentacion.cs
         private void button12_Click(object sender, EventArgs e)
         {
 
-                Producto_Bocina form = new Producto_Bocina();
-                form.Show();
-           
+            Producto_Bocina form = new Producto_Bocina();
+            form.Show();
+
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Producto_CPU form = new Producto_CPU();
+            form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Producto_GPU form = new Producto_GPU();
+            form.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Producto_Ram form = new Producto_Ram();
+            form.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Producto_SSD form = new Producto_SSD();
+            form.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Producto_Laptos form = new Producto_Laptos();
+            form.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Producto_Telefono form = new Producto_Telefono();
+            form.Show();
+        }
+
+        private void btn_Acerca_de_Click(object sender, EventArgs e)
+        {
+            Acerca_de form = new Acerca_de();
             form.Show();
         }
     }

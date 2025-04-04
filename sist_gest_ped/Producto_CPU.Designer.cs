@@ -81,7 +81,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(81, 255);
+            label1.Location = new Point(71, 255);
             label1.Name = "label1";
             label1.Size = new Size(96, 22);
             label1.TabIndex = 3;
@@ -113,12 +113,13 @@
             // 
             btn_ver_i5.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_ver_i5.ForeColor = Color.Blue;
-            btn_ver_i5.Location = new Point(81, 332);
+            btn_ver_i5.Location = new Point(71, 332);
             btn_ver_i5.Name = "btn_ver_i5";
             btn_ver_i5.Size = new Size(96, 35);
             btn_ver_i5.TabIndex = 6;
             btn_ver_i5.Text = "Ver Mas...";
             btn_ver_i5.UseVisualStyleBackColor = true;
+            btn_ver_i5.Click += btn_ver_i5_Click;
             // 
             // btn_ver_i7
             // 
@@ -130,6 +131,7 @@
             btn_ver_i7.TabIndex = 7;
             btn_ver_i7.Text = "Ver Mas...";
             btn_ver_i7.UseVisualStyleBackColor = true;
+            btn_ver_i7.Click += btn_ver_i7_Click;
             // 
             // btn_ver_i9
             // 
@@ -141,6 +143,7 @@
             btn_ver_i9.TabIndex = 8;
             btn_ver_i9.Text = "Ver Mas...";
             btn_ver_i9.UseVisualStyleBackColor = true;
+            btn_ver_i9.Click += btn_ver_i9_Click;
             // 
             // pictureBox4
             // 

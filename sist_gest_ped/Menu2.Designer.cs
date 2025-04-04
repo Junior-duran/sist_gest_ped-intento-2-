@@ -89,6 +89,7 @@
             btn_Acerca_de.Text = "Acerca de...";
             btn_Acerca_de.TextAlign = ContentAlignment.MiddleLeft;
             btn_Acerca_de.UseVisualStyleBackColor = true;
+            btn_Acerca_de.Click += btn_Acerca_de_Click;
             // 
             // panel2
             // 
@@ -176,6 +177,7 @@
             button7.Text = "TELEFONOS";
             button7.TextAlign = ContentAlignment.MiddleLeft;
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button9
             // 
@@ -192,6 +194,7 @@
             button9.Text = "LAPTOS";
             button9.TextAlign = ContentAlignment.MiddleLeft;
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // btn_Dispositivo
             // 
@@ -236,6 +239,7 @@
             button4.Text = "SSD";
             button4.TextAlign = ContentAlignment.MiddleLeft;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -252,6 +256,7 @@
             button3.Text = "RAM";
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -268,6 +273,7 @@
             button2.Text = "GPU";
             button2.TextAlign = ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 

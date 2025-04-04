@@ -53,9 +53,9 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.FromArgb(128, 255, 255);
+            button3.BackColor = Color.Blue;
             button3.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.Fuchsia;
+            button3.ForeColor = Color.White;
             button3.Location = new Point(333, 424);
             button3.Name = "button3";
             button3.Size = new Size(124, 39);

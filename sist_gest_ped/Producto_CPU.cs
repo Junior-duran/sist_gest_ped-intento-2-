@@ -16,5 +16,23 @@ namespace CapaPresentacion.cs
         {
             InitializeComponent();
         }
+
+        private void btn_ver_i5_Click(object sender, EventArgs e)
+        {
+            ProductoEscogido form = new ProductoEscogido();
+            form.Show();
+        }
+
+        private void btn_ver_i7_Click(object sender, EventArgs e)
+        {
+            ProductoEscogido2 form = new ProductoEscogido2();
+            form.Show();
+        }
+
+        private void btn_ver_i9_Click(object sender, EventArgs e)
+        {
+            ProductoEscogido3 form = new ProductoEscogido3();
+            form.Show();
+        }
     }
 }

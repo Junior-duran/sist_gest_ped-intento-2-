@@ -24,6 +24,7 @@ namespace ENT
         {
             Nombre = nombre;
             Contraseña = HashContraseña(contraseña);
+
         }
 
         public static byte[] HashContraseña(string contraseña)
@@ -45,43 +46,5 @@ namespace ENT
             return $"Usuario: {Nombre}";
         }
     }
-    public class CN_Usuarios
-    {
-        private CD_Conexion conexion = new CD_Conexion();
-        private string usuario;
-        private string contrasena;
-        public string Usuario
-        {
-            get { return usuario; }
-            set { usuario = value; }
-        }
-        public string Contrasena
-        {
-            get { return contrasena; }
-            set { contrasena = value; }
-        }
-        public bool Login()
-        {
-            try
-            {
-                string query = @"SELECT COUNT(*) FROM Usuarios 
-                                 WHERE Usuario = @usuario 
-                                 AND Contraseña = HASHBYTES('SHA2_256', @contrasena)";
-                using (SqlConnection conexion_a_base_de_datos = conexion.AbrirConexion())
-                {
-                    using (SqlCommand comando = new SqlCommand(query, conexion_a_base_de_datos))
-                    {
-                        comando.Parameters.AddWithValue("@usuario", usuario);
-                        comando.Parameters.AddWithValue("@contrasena", contrasena);
-                        int count = (int)comando.ExecuteScalar();
-                        return count > 0;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al ingresar datos: " + ex.Message);
-            }
-        }
-    }
+    
 }

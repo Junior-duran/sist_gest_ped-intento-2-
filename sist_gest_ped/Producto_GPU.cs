@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CapaPresentacion.cs
+{
+    public partial class Producto_GPU : Form
+    {
+        public Producto_GPU()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_ver_3050_Click(object sender, EventArgs e)
+        {
+            ProductoEscogido4 form = new ProductoEscogido4();
+            form.Show();
+        }
+
+        private void btn_ver_4070_Click(object sender, EventArgs e)
+        {
+            ProductoEscogido5 form = new ProductoEscogido5();
+            form.Show();
+        }
+
+        private void btn_ver_5080_Click(object sender, EventArgs e)
+        {
+            ProductoEscogido6 form = new ProductoEscogido6();
+            form.Show();
+        }
+    }
+}
