@@ -26,18 +26,28 @@ namespace CapaPresentacion.cs
         {
             ProductoEscogido10 form = new ProductoEscogido10();
             form.Show();
+            this.Close();
         }
 
         private void btn_ver_SAMGUNG_Click(object sender, EventArgs e)
         {
             ProductoEscogido11 form = new ProductoEscogido11();
             form.Show();
+            this.Close();
         }
 
         private void btn_ver_M2HIK_Click(object sender, EventArgs e)
         {
             ProductoEscogico12 form = new ProductoEscogico12();
             form.Show();
+            this.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            CarritoCompras form = new CarritoCompras();
+            form.Show();
+            this.Close();
         }
     }
 }

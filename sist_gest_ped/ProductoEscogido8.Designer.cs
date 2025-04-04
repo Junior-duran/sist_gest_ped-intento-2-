@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoEscogido8));
-            label7 = new Label();
             pictureBox2 = new PictureBox();
             label2 = new Label();
             label1 = new Label();
@@ -40,26 +39,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Fuchsia;
-            label7.Location = new Point(397, 71);
-            label7.Name = "label7";
-            label7.Size = new Size(125, 19);
-            label7.TabIndex = 29;
-            label7.Text = "Carrito de Compra";
-            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(420, 23);
+            pictureBox2.Location = new Point(437, 12);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(85, 45);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 28;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // label2
             // 
@@ -121,7 +110,6 @@
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(534, 493);
-            Controls.Add(label7);
             Controls.Add(pictureBox2);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -137,8 +125,6 @@
         }
 
         #endregion
-
-        private Label label7;
         private PictureBox pictureBox2;
         private Label label2;
         private Label label1;

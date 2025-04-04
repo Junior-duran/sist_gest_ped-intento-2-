@@ -13,4 +13,5 @@ namespace CapaNegocios
             int Id { get; set; } // Id común para todas las entidades
             string Nombre { get; set; } // Nombre común
         }
+
 }

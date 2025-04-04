@@ -21,5 +21,12 @@ namespace CapaPresentacion.cs
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            CarritoCompras form = new CarritoCompras();
+            form.Show();
+            this.Close();
+        }
     }
 }

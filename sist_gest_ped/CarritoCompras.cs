@@ -16,5 +16,19 @@ namespace CapaPresentacion.cs
         {
             InitializeComponent();
         }
+
+        private void btn_AArticulos_Click(object sender, EventArgs e)
+        {
+            Menu2 form = new Menu2();
+            form.Show();
+            this.Close();
+        }
+
+        private void btn_RealComp_Click(object sender, EventArgs e)
+        {
+            MetodoPago form = new MetodoPago();
+            form.Show();
+            this.Close();
+        }
     }
 }

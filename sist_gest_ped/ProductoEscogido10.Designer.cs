@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoEscogido10));
             pictureBox2 = new PictureBox();
-            label7 = new Label();
             label2 = new Label();
             button2 = new Button();
             button3 = new Button();
@@ -49,17 +48,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 29;
             pictureBox2.TabStop = false;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Fuchsia;
-            label7.Location = new Point(418, 62);
-            label7.Name = "label7";
-            label7.Size = new Size(125, 19);
-            label7.TabIndex = 30;
-            label7.Text = "Carrito de Compra";
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // label2
             // 
@@ -127,7 +116,6 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label2);
-            Controls.Add(label7);
             Controls.Add(pictureBox2);
             Name = "ProductoEscogido10";
             Text = "ProductoEscogido10";
@@ -140,7 +128,6 @@
         #endregion
 
         private PictureBox pictureBox2;
-        private Label label7;
         private Label label2;
         private Button button2;
         private Button button3;

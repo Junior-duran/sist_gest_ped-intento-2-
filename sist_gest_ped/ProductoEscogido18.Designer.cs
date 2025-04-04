@@ -34,7 +34,6 @@
             button2 = new Button();
             button3 = new Button();
             pictureBox2 = new PictureBox();
-            label7 = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -94,17 +93,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 54;
             pictureBox2.TabStop = false;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Fuchsia;
-            label7.Location = new Point(386, 62);
-            label7.Name = "label7";
-            label7.Size = new Size(125, 19);
-            label7.TabIndex = 55;
-            label7.Text = "Carrito de Compra";
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox1
             // 
@@ -122,7 +111,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(513, 510);
             Controls.Add(pictureBox1);
-            Controls.Add(label7);
             Controls.Add(pictureBox2);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -143,7 +131,6 @@
         private Button button2;
         private Button button3;
         private PictureBox pictureBox2;
-        private Label label7;
         private PictureBox pictureBox1;
     }
 }

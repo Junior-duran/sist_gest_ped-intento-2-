@@ -90,9 +90,9 @@
             // 
             // btn_Volver
             // 
-            btn_Volver.BackColor = Color.FromArgb(128, 255, 255);
+            btn_Volver.BackColor = Color.Blue;
             btn_Volver.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_Volver.ForeColor = Color.Fuchsia;
+            btn_Volver.ForeColor = Color.White;
             btn_Volver.Location = new Point(291, 421);
             btn_Volver.Name = "btn_Volver";
             btn_Volver.Size = new Size(124, 39);
@@ -155,6 +155,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 39;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // Producto_Audifonos
             // 

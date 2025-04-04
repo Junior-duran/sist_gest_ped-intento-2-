@@ -39,7 +39,6 @@
             label5 = new Label();
             label6 = new Label();
             pictureBox2 = new PictureBox();
-            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -148,24 +147,13 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Fuchsia;
-            label7.Location = new Point(419, 51);
-            label7.Name = "label7";
-            label7.Size = new Size(125, 19);
-            label7.TabIndex = 11;
-            label7.Text = "Carrito de Compra";
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // ProductoEscogido
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(547, 499);
-            Controls.Add(label7);
             Controls.Add(pictureBox2);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -195,6 +183,5 @@
         private Label label5;
         private Label label6;
         private PictureBox pictureBox2;
-        private Label label7;
     }
 }

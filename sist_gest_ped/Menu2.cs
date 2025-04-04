@@ -70,6 +70,7 @@ namespace CapaPresentacion.cs
         {
             Producto_Audifonos form = new Producto_Audifonos();
             form.Show();
+            this.Close();
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -77,7 +78,7 @@ namespace CapaPresentacion.cs
 
             Producto_Bocina form = new Producto_Bocina();
             form.Show();
-
+            this.Close();
 
         }
 
@@ -85,42 +86,49 @@ namespace CapaPresentacion.cs
         {
             Producto_CPU form = new Producto_CPU();
             form.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Producto_GPU form = new Producto_GPU();
             form.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             Producto_Ram form = new Producto_Ram();
             form.Show();
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Producto_SSD form = new Producto_SSD();
             form.Show();
+            this.Close();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             Producto_Laptos form = new Producto_Laptos();
             form.Show();
+            this.Close();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Producto_Telefono form = new Producto_Telefono();
             form.Show();
+            this.Close();
         }
 
         private void btn_Acerca_de_Click(object sender, EventArgs e)
         {
             Acerca_de form = new Acerca_de();
-            form.Show();
+            form.Show(); 
+            this.Close();
         }
     }
 }

@@ -80,9 +80,9 @@
             // 
             // btn_Volver
             // 
-            btn_Volver.BackColor = Color.FromArgb(128, 255, 255);
+            btn_Volver.BackColor = Color.Blue;
             btn_Volver.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_Volver.ForeColor = Color.Fuchsia;
+            btn_Volver.ForeColor = Color.White;
             btn_Volver.Location = new Point(306, 382);
             btn_Volver.Name = "btn_Volver";
             btn_Volver.Size = new Size(124, 39);
