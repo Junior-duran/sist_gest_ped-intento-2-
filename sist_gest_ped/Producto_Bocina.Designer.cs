@@ -32,7 +32,6 @@
             label4 = new Label();
             label3 = new Label();
             btn_Agregar_Sony = new Button();
-            btn_Volver = new Button();
             btn_Agregar_AirPods = new Button();
             label2 = new Label();
             label1 = new Label();
@@ -79,19 +78,6 @@
             btn_Agregar_Sony.TabIndex = 45;
             btn_Agregar_Sony.Text = "Agregar ";
             btn_Agregar_Sony.UseVisualStyleBackColor = false;
-            // 
-            // btn_Volver
-            // 
-            btn_Volver.BackColor = Color.Blue;
-            btn_Volver.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_Volver.ForeColor = Color.White;
-            btn_Volver.Location = new Point(350, 449);
-            btn_Volver.Margin = new Padding(3, 4, 3, 4);
-            btn_Volver.Name = "btn_Volver";
-            btn_Volver.Size = new Size(142, 46);
-            btn_Volver.TabIndex = 44;
-            btn_Volver.Text = "Volver";
-            btn_Volver.UseVisualStyleBackColor = false;
             // 
             // btn_Agregar_AirPods
             // 
@@ -186,7 +172,6 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(btn_Agregar_Sony);
-            Controls.Add(btn_Volver);
             Controls.Add(btn_Agregar_AirPods);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -207,7 +192,6 @@
         private Label label4;
         private Label label3;
         private Button btn_Agregar_Sony;
-        private Button btn_Volver;
         private Button btn_Agregar_AirPods;
         private Label label2;
         private Label label1;

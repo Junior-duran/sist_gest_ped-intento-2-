@@ -33,7 +33,6 @@
             pictureBox2 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
-            btn_Volver = new Button();
             btn_Agregar_AirPods = new Button();
             btn_Agregar_Sony = new Button();
             label3 = new Label();
@@ -88,18 +87,6 @@
             label2.Size = new Size(190, 23);
             label2.TabIndex = 3;
             label2.Text = "SONY WH-1000XM5";
-            // 
-            // btn_Volver
-            // 
-            btn_Volver.BackColor = Color.Blue;
-            btn_Volver.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_Volver.ForeColor = Color.White;
-            btn_Volver.Location = new Point(291, 421);
-            btn_Volver.Name = "btn_Volver";
-            btn_Volver.Size = new Size(124, 39);
-            btn_Volver.TabIndex = 35;
-            btn_Volver.Text = "Volver";
-            btn_Volver.UseVisualStyleBackColor = false;
             // 
             // btn_Agregar_AirPods
             // 
@@ -181,7 +168,6 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(btn_Agregar_Sony);
-            Controls.Add(btn_Volver);
             Controls.Add(btn_Agregar_AirPods);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -205,7 +191,6 @@
         private PictureBox pictureBox2;
         private Label label1;
         private Label label2;
-        private Button btn_Volver;
         private Button btn_Agregar_AirPods;
         private Button btn_Agregar_Sony;
         private Label label3;
