@@ -49,5 +49,12 @@ namespace CapaPresentacion.cs
             form.Show();
             this.Close();
         }
+
+        private void btn_Volver_Click(object sender, EventArgs e)
+        {
+            Menu2 form = new Menu2();
+            form.Show();
+            this.Close();
+        }
     }
 }

@@ -39,6 +39,7 @@
             label3 = new Label();
             label4 = new Label();
             pictureBox3 = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -74,7 +75,7 @@
             label1.Location = new Point(118, 247);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(117, 19);
+            label1.Size = new Size(145, 23);
             label1.TabIndex = 2;
             label1.Text = "AIRPODS PRO";
             // 
@@ -84,7 +85,7 @@
             label2.Location = new Point(431, 247);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(154, 19);
+            label2.Size = new Size(190, 23);
             label2.TabIndex = 3;
             label2.Text = "SONY WH-1000XM5";
             // 
@@ -131,7 +132,7 @@
             label3.ForeColor = Color.Black;
             label3.Location = new Point(51, 287);
             label3.Name = "label3";
-            label3.Size = new Size(286, 75);
+            label3.Size = new Size(361, 95);
             label3.TabIndex = 37;
             label3.Text = resources.GetString("label3.Text");
             // 
@@ -142,7 +143,7 @@
             label4.ForeColor = Color.Black;
             label4.Location = new Point(387, 287);
             label4.Name = "label4";
-            label4.Size = new Size(332, 90);
+            label4.Size = new Size(435, 114);
             label4.TabIndex = 38;
             label4.Text = resources.GetString("label4.Text");
             // 
@@ -157,11 +158,25 @@
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Fuchsia;
+            button1.Location = new Point(12, 13);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(110, 41);
+            button1.TabIndex = 40;
+            button1.Text = "Volver";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Producto_Audifonos
             // 
-            AutoScaleDimensions = new SizeF(9F, 19F);
+            AutoScaleDimensions = new SizeF(12F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(749, 503);
+            Controls.Add(button1);
             Controls.Add(pictureBox3);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -196,5 +211,6 @@
         private Label label3;
         private Label label4;
         private PictureBox pictureBox3;
+        private Button button1;
     }
 }

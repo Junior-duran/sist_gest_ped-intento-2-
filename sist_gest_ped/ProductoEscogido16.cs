@@ -28,5 +28,19 @@ namespace CapaPresentacion.cs
             form.Show();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CarritoCompras form = new CarritoCompras();
+            form.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Producto_Telefono form = new Producto_Telefono();
+            form.Show();
+            this.Close();
+        }
     }
 }

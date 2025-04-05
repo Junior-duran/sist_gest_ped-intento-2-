@@ -42,9 +42,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(171, 62);
+            pictureBox1.Location = new Point(195, 73);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(236, 231);
+            pictureBox1.Size = new Size(270, 272);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 33;
             pictureBox1.TabStop = false;
@@ -52,9 +53,10 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(453, 14);
+            pictureBox2.Location = new Point(518, 16);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(85, 45);
+            pictureBox2.Size = new Size(97, 53);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 34;
             pictureBox2.TabStop = false;
@@ -64,58 +66,63 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(91, 346);
+            label3.Location = new Point(104, 407);
             label3.Name = "label3";
-            label3.Size = new Size(389, 57);
+            label3.Size = new Size(496, 66);
             label3.TabIndex = 36;
             label3.Text = "Portátil ASUS ROG STRIX G15 con Intel Core i7-12700H y \r\nGPU NVIDIA GeForce RTX 3070. Pantalla Full HD 144Hz, \r\ndiseñada para gamers con refrigeración avanzada.";
             // 
             // button3
             // 
-            button3.BackColor = Color.FromArgb(128, 255, 255);
+            button3.BackColor = Color.Blue;
             button3.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.Fuchsia;
-            button3.Location = new Point(292, 442);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(334, 520);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(124, 39);
+            button3.Size = new Size(142, 46);
             button3.TabIndex = 37;
             button3.Text = "Volver";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(255, 128, 255);
             button2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(132, 442);
+            button2.Location = new Point(151, 520);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(125, 39);
+            button2.Size = new Size(143, 46);
             button2.TabIndex = 38;
             button2.Text = "Agregar ";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(206, 312);
+            label1.Location = new Point(235, 367);
             label1.Name = "label1";
-            label1.Size = new Size(165, 19);
+            label1.Size = new Size(205, 22);
             label1.TabIndex = 39;
             label1.Text = "ASUS ROG STRIX G15";
             // 
             // ProductoEscogido13
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(567, 510);
+            ClientSize = new Size(648, 600);
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button3);
             Controls.Add(label3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ProductoEscogido13";
             Text = "ProductoEscogido13";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
