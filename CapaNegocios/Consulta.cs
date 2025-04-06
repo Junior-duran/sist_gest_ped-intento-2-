@@ -16,8 +16,6 @@ namespace ENT
         public DateTime Fecha { get; set; }
         public string MetodoDePago { get; set; }
 
-        public Consulta() { }
-
         public Consulta(int id, string nombre, decimal precio, DateTime fecha, string metodoDePago)
         {
             Id = id;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ENT;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using CapaNegocios;
 
 namespace CapaPresentacion.cs
 {
@@ -15,7 +18,17 @@ namespace CapaPresentacion.cs
         public CarritoCompras()
         {
             InitializeComponent();
+            // Inicializar el DataGridView
         }
+        private void InicializarCarrito()
+        {
+            dgvCarrito.Columns.Clear(); // Asegúrate que no haya columnas duplicadas
+            dgvCarrito.Columns.Add("Id", "ID");
+            dgvCarrito.Columns.Add("Nombre", "Nombre");
+            dgvCarrito.Columns.Add("Marca", "Marca");
+            dgvCarrito.Columns.Add("Precio", "Precio");
+        }
+        
 
         private void btn_AArticulos_Click(object sender, EventArgs e)
         {
@@ -37,5 +50,16 @@ namespace CapaPresentacion.cs
             form.Show();
             this.Close();
         }
-    }
+        
+
+        private void CarritoCompras_Load(object sender, EventArgs e)
+        {
+            // Mostrar todos los productos en el catálogo (dgvProductos)
+            dgvCarrito.DataSource = Producto.ObtenerTodos();
+            dgvCarrito.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            InicializarCarrito(); // Prepara las columnas del carrito
+        }
+
+    } 
 }

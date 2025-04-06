@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using Microsoft.SqlServer.Server;
 
 namespace CapaDatos
 {
@@ -26,4 +25,5 @@ namespace CapaDatos
             return Conexion;
         }
     }
+
 }

@@ -18,7 +18,6 @@ namespace ENT
         public string Cedula { get; set; }
         public int IdConsulta { get; set; }
 
-        public MetodoDePago() { }
 
         public MetodoDePago(int id, string nombre, string metodoPG, string cedula, int idConsulta)
         {
