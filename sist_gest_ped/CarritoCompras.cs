@@ -10,15 +10,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using CapaNegocios;
+using static ENT.Producto;
 
 namespace CapaPresentacion.cs
 {
     public partial class CarritoCompras : Form
     {
+        private Producto1 ProductoDll = new Producto1();
         public CarritoCompras()
         {
             InitializeComponent();
             // Inicializar el DataGridView
+            dgvCarrito.DataSource = ProductoDll.ObtenerListaProducto();
 
         }
         private void btn_AArticulos_Click(object sender, EventArgs e)
@@ -40,6 +43,11 @@ namespace CapaPresentacion.cs
             Menu2 form = new Menu2();
             form.Show();
             this.Close();
+        }
+
+        private void CarritoCompras_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -39,6 +39,7 @@
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
             button1 = new Button();
+            richTextBox1 = new RichTextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -162,11 +163,20 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(343, 14);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(125, 49);
+            richTextBox1.TabIndex = 50;
+            richTextBox1.Text = "";
+            // 
             // Producto_Bocina
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 529);
+            Controls.Add(richTextBox1);
             Controls.Add(button1);
             Controls.Add(pictureBox3);
             Controls.Add(label4);
@@ -199,5 +209,6 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
         private Button button1;
+        private RichTextBox richTextBox1;
     }
 }

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using CapaNegocios;
 using CapaDatos;
 using System.Data;
-using static ENT.Producto;
+
 
 
 
@@ -29,43 +29,50 @@ namespace ENT
             Marca = marca;
             Descripcion = descripcion;
             IdProveedor = idProveedor;
-            idProducto = IdProducto;
+            IdProducto = idProducto;
         }
 
         public override string ToString()
         {
             return $"Producto: {Nombre}, Marca: {Marca}, Descripción: {Descripcion}, Proveedor ID: {IdProveedor}, idProducto: {IdProducto}";
         }
-
-
-        public static List<Producto> ObtenerTodos()
+        public class Producto1
         {
-            List<Producto> lista = new List<Producto>();
-            
-                using (SqlConnection conn = new SqlConnection(Conexion.CadenaConexion))
+            private Producto1 ProductoDll = new Producto1();
+
+            public DataTable ObtenerListaProducto()
+            {
+                return ProductoDll.ObtenerListaProducto();
+            }
+        }
+        public class ProductoNegocio
+        {
+            // public ProductoDll (ProdctoData);
+
+            public ProductoNegocio()
+            {
+                productoDll = new ProductoDll(); // Crear la instancia de la capa de datos
+            }
+
+            public string ObtenerListaProducto(int productoId)
+            {
+                try
                 {
-                    string sql = "SELECT * FROM Producto";
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    conn.Open();
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    while (dr.Read())
-                    {
-                        lista.Add(new Producto
-                        {
-                            IdProducto = Convert.ToInt32(dr["idProducto"]),
-                            Nombre = dr["Nombre"].ToString(),
-                            Marca = dr["Marca"].ToString(),
-                            Descripcion = dr["Descripcion"].ToString(),
-                            IdProveedor = Convert.ToInt32(dr["idProveedor"]),
-                            Precio = Convert.ToDecimal(dr["Precio"])
-                        });
-                    }
+                    // Llamar al método de la capa de datos para obtener el nombre del producto
+                    return ProdctoData.ObtenerNoProducto(productoId);
                 }
-            return lista;
+                catch (Exception ex)
+                {
+                    throw new Exception("Error en la capa de negocio", ex);
+                }
+            }
 
         }
+
     }
+
 }
+
 
             
     

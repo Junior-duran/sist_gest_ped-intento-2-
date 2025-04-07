@@ -25,5 +25,4 @@ namespace CapaDatos
             return Conexion;
         }
     }
-
 }

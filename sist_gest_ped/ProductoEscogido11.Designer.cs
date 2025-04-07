@@ -43,7 +43,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(111, 372);
+            label3.Location = new Point(67, 372);
             label3.Name = "label3";
             label3.Size = new Size(569, 88);
             label3.TabIndex = 28;
@@ -81,7 +81,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(235, 64);
+            pictureBox1.Location = new Point(214, 63);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(270, 272);
@@ -92,7 +92,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(583, 16);
+            pictureBox2.Location = new Point(603, 13);
             pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(97, 53);
@@ -106,7 +106,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(235, 313);
+            label1.Location = new Point(219, 313);
             label1.Name = "label1";
             label1.Size = new Size(265, 22);
             label1.TabIndex = 34;
