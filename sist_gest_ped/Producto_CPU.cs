@@ -19,6 +19,7 @@ namespace CapaPresentacion.cs
 
         private void btn_ver_i5_Click(object sender, EventArgs e)
         {
+
             ProductoEscogido form = new ProductoEscogido();
             form.Show();
             this.Close();

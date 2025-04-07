@@ -1,4 +1,5 @@
-﻿using ENT;
+﻿using CapaNegocios;
+using ENT;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,15 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDatos;
 
 namespace CapaPresentacion.cs
 {
     public partial class ProductoEscogido : Form
     {
+        private int _productoId;
         public ProductoEscogido()
         {
             InitializeComponent();
+           // _productoId = productoId;
         }
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -35,7 +40,25 @@ namespace CapaPresentacion.cs
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void ProductoEscogido_Load(object sender, EventArgs e)
+        {
+            /*ProductoNegocio negocio = new ProductoNegocio();
+            Producto producto = negocio.BuscarProducto(_productoId);
+
+            if (producto != null)
+            {
+                richTextBox1.Text = $"Nombre: {producto.Nombre}\n" +
+                                    $"Marca: {producto.Marca}\n" +
+                                    $"Descripción: {producto.Descripcion}\n" +
+                                    $"Precio: {producto.Precio:C}";
+            }
+            else
+            {
+                richTextBox1.Text = "Producto no encontrado.";
+            }*/
         }
     }
 }

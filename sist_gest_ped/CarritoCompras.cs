@@ -16,13 +16,12 @@ namespace CapaPresentacion.cs
 {
     public partial class CarritoCompras : Form
     {
-        private Producto1 ProductoDll = new Producto1();
+      
         public CarritoCompras()
         {
             InitializeComponent();
             // Inicializar el DataGridView
-            dgvCarrito.DataSource = ProductoDll.ObtenerListaProducto();
-
+            
         }
         private void btn_AArticulos_Click(object sender, EventArgs e)
         {

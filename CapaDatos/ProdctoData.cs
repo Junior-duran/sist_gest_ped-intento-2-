@@ -1,46 +1,57 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Data;
 
 namespace CapaDatos
 {
-    public class ProdctoData
+    public class Producto
     {
-        private string connectionString = "Server=.;Database=Sist_Gest_Ventas;Integrated Security=True;"; // Reemplaza con tu cadena de conexión
+        public int ProductoID { get; set; }
+        public string Nombre { get; set; }
+        public string Marca { get; set; }
+        public string Descripcion { get; set; }
+        public decimal Precio { get; set; }
+    }
+    public class ProductoData
+    {
+        private string connectionString = "Server=.;Database=Sist_Gest_Ventas;Integrated Security=True;";
 
-        public string ObtenerNombreProducto(int productoId)
+        public Producto ObtenerProductoPorID(int productoId)
         {
-            string nombreProducto = null;
-            string query = "SELECT Nombre FROM Producto WHERE ProductoID = @ProductoID"; // Consulta SQL
+            Producto producto = null;
+            string query = "SELECT ProductoID, Nombre, Marca, Descripcion, Precio FROM Producto WHERE ProductoID = @ProductoID";
 
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@ProductoID", productoId);
-                        var resultado = cmd.ExecuteScalar(); // Ejecutar la consulta
-
-                        if (resultado != null)
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            nombreProducto = resultado.ToString();
+                            if (reader.Read())
+                            {
+                                producto = new Producto
+                                {
+                                    ProductoID = reader.GetInt32(0),
+                                    Nombre = reader.GetString(1),
+                                    Marca = reader.GetString(2),
+                                    Descripcion = reader.GetString(3),
+                                    Precio = reader.GetDecimal(4)
+                                };
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al buscar el producto", ex);
+                throw new Exception("Error al obtener el producto", ex);
             }
 
-            return nombreProducto;
+            return producto;
         }
     }
 }
+
