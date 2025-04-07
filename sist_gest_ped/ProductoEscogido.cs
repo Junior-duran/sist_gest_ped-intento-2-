@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ENT;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,9 +35,8 @@ namespace CapaPresentacion.cs
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CarritoCompras form = new CarritoCompras();
-            form.Show();
-            this.Close();
+           
         }
     }
 }
+

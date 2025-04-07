@@ -133,7 +133,7 @@
             Controls.Add(btn_AArticulos);
             Name = "CarritoCompras";
             Text = "CarritoCompras";
-            Load += CarritoCompras_Load;
+  
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).EndInit();
             ((System.ComponentModel.ISupportInitialize)pb_Carrito).EndInit();
             ResumeLayout(false);

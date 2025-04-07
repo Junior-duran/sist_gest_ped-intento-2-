@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using CapaNegocios;
 using CapaDatos;
 using System.Data;
+using static ENT.Producto;
 
 
 namespace ENT
@@ -20,46 +21,20 @@ namespace ENT
         public int IdProveedor { get; set; }
         public decimal Precio { get; set; }
         public int IdProducto { get; set; }
-        public Producto(int id, string nombre, string marca, string descripcion, int idProveedor)
+        public Producto(int id, string nombre, string marca, string descripcion, int idProveedor, int idProducto)
         {
             Id = id;
             Nombre = nombre;
             Marca = marca;
             Descripcion = descripcion;
             IdProveedor = idProveedor;
+            idProducto = IdProducto;
         }
 
         public override string ToString()
         {
-            return $"Producto: {Nombre}, Marca: {Marca}, Descripción: {Descripcion}, Proveedor ID: {IdProveedor}";
+            return $"Producto: {Nombre}, Marca: {Marca}, Descripción: {Descripcion}, Proveedor ID: {IdProveedor}, idProducto: {IdProducto}";
         }
 
-
-        public static List<Producto> ObtenerTodos()
-        {
-            List<Producto> lista = new List<Producto>();
-            
-                using (SqlConnection conn = new SqlConnection(Conexion.CadenaConexion))
-                {
-                    string sql = "SELECT * FROM Producto";
-                    SqlCommand cmd = new SqlCommand(sql, conn);
-                    conn.Open();
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    while (dr.Read())
-                    {
-                        lista.Add(new Producto
-                        {
-                            IdProducto = Convert.ToInt32(dr["idProducto"]),
-                            Nombre = dr["Nombre"].ToString(),
-                            Marca = dr["Marca"].ToString(),
-                            Descripcion = dr["Descripcion"].ToString(),
-                            IdProveedor = Convert.ToInt32(dr["idProveedor"]),
-                            Precio = Convert.ToDecimal(dr["Precio"])
-                        });
-                    }
-                }
-            return lista;
-
-        }
     }
 }
