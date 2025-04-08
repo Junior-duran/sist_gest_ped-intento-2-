@@ -1,5 +1,4 @@
 ﻿using CapaNegocios;
-using ENT;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +18,7 @@ namespace CapaPresentacion.cs
         public ProductoEscogido()
         {
             InitializeComponent();
-           // _productoId = productoId;
+           
         }
 
 
@@ -45,20 +44,23 @@ namespace CapaPresentacion.cs
 
         private void ProductoEscogido_Load(object sender, EventArgs e)
         {
-            /*ProductoNegocio negocio = new ProductoNegocio();
-            Producto producto = negocio.BuscarProducto(_productoId);
+            Producto producto = Producto.ObtenerProductoFijo();
 
             if (producto != null)
             {
-                richTextBox1.Text = $"Nombre: {producto.Nombre}\n" +
-                                    $"Marca: {producto.Marca}\n" +
-                                    $"Descripción: {producto.Descripcion}\n" +
-                                    $"Precio: {producto.Precio:C}";
+                richTextBox1.Text = producto.ToString();
             }
             else
             {
-                richTextBox1.Text = "Producto no encontrado.";
-            }*/
+                MessageBox.Show("No se encontró el producto con ID 5.");
+                richTextBox1.Clear();
+            }
+
+        }
+       
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            //// Aquí puedes manejar el evento TextChanged si es necesario
         }
     }
 }

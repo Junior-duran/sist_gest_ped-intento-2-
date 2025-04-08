@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocios;
+using ENT;
 
 namespace CapaPresentacion.cs
 {
@@ -15,6 +17,7 @@ namespace CapaPresentacion.cs
         public MetodoPago()
         {
             InitializeComponent();
+            CargarMetodosDePago();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -23,5 +26,15 @@ namespace CapaPresentacion.cs
             form.Show();
             this.Close();
         }
+        private void CargarMetodosDePago()
+        {
+            List<string> metodos = MetodoDePago.ObtenerMetodosDePago();
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(metodos.ToArray());
+
+            if (comboBox1.Items.Count > 0)
+                comboBox1.SelectedIndex = 0;
+        }
+
     }
 }

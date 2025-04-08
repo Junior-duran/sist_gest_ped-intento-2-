@@ -99,11 +99,12 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(97, 315);
+            richTextBox1.Location = new Point(103, 305);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(345, 96);
             richTextBox1.TabIndex = 11;
             richTextBox1.Text = "";
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // ProductoEscogido
             // 

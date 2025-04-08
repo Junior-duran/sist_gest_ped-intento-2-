@@ -34,15 +34,12 @@
             textBox3 = new TextBox();
             comboBox1 = new ComboBox();
             pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
             button1 = new Button();
             button2 = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // textBox1
@@ -52,7 +49,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(242, 25);
             textBox1.TabIndex = 0;
-            textBox1.Text = "Nombre";
             // 
             // textBox2
             // 
@@ -61,7 +57,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(242, 25);
             textBox2.TabIndex = 1;
-            textBox2.Text = "Cedula";
             // 
             // textBox3
             // 
@@ -70,7 +65,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(242, 25);
             textBox3.TabIndex = 2;
-            textBox3.Text = "Correo";
             // 
             // comboBox1
             // 
@@ -91,36 +85,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(28, 254);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(31, 25);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 9;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(28, 302);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(31, 24);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 10;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(28, 206);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(31, 25);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 11;
-            pictureBox4.TabStop = false;
             // 
             // button1
             // 
@@ -147,16 +111,43 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(187, 141);
+            label1.Name = "label1";
+            label1.Size = new Size(57, 17);
+            label1.TabIndex = 14;
+            label1.Text = "Nombre";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(187, 186);
+            label2.Name = "label2";
+            label2.Size = new Size(48, 17);
+            label2.TabIndex = 15;
+            label2.Text = "Cedula";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(187, 234);
+            label3.Name = "label3";
+            label3.Size = new Size(49, 17);
+            label3.TabIndex = 16;
+            label3.Text = "Correo";
+            // 
             // MetodoPago
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(428, 525);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(comboBox1);
             Controls.Add(textBox3);
@@ -165,9 +156,6 @@
             Name = "MetodoPago";
             Text = "MetodoPago";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -179,10 +167,10 @@
         private TextBox textBox3;
         private ComboBox comboBox1;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
         private Button button1;
         private Button button2;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }
