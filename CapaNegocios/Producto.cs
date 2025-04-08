@@ -1,68 +1,74 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CapaNegocios;
 using System.Data.SqlClient;
-using System.Data;
-using CapaNegocios;
 
-namespace ENT
+public class Producto : IEntidad
 {
-    public class Producto : IEntidad
+    public int Id { get; set; } // ID del producto
+    public string Nombre { get; set; }
+    public string Marca { get; set; }
+    public string Descripcion { get; set; }
+    public decimal IdProveedor { get; set; }
+    public decimal Precio { get; set; }
+
+    // Constructor
+    public Producto(int id, string nombre, string marca, string descripcion, decimal idProveedor, decimal precio)
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Marca { get; set; }
-        public string Descripcion { get; set; }
-        public int IdProveedor { get; set; }
-        public decimal Precio { get; set; }
-        public int IdProducto { get; set; }
+        Id = id;
+        Nombre = nombre;
+        Marca = marca;
+        Descripcion = descripcion;
+        IdProveedor = idProveedor;
+        Precio = precio;
+    }
 
-        public Producto(int id, string nombre, string marca, string descripcion, int idProveedor, int idProducto)
-        {
-            Id = id;
-            Nombre = nombre;
-            Marca = marca;
-            Descripcion = descripcion;
-            IdProveedor = idProveedor;
-            IdProducto = idProducto;
-        }
+    // Método ToString para mostrar la información del producto
+    public override string ToString()
+    {
+        return $"📦 PRODUCTO ENCONTRADO\n" +
+               $"ID: {Id}\n" +
+               $"Nombre: {Nombre}\n" +
+               $"Marca: {Marca}\n" +
+               $"Descripción: {Descripcion}\n" +
+               $"Precio: {Precio:C}";
+    }
 
-        public override string ToString()
-        {
-            return $"Producto: {Nombre}, Marca: {Marca}, Descripción: {Descripcion}, Proveedor ID: {IdProveedor}, idProducto: {IdProducto}";
-        }
+    public class ProductoData
+    {
+        public string connectionString = "Server=.;Database=Sist_Gest_Ventas;Integrated Security=True;"; // Cadena de conexión
 
-        // ⬇️ MÉTODO ESTÁTICO PARA OBTENER UN PRODUCTO CON ID FIJO
-        public static Producto ObtenerProductoFijo()
+        // Método que obtiene los detalles del producto por su ID
+        public Producto ObtenerProductoPorID(int idProducto)
         {
             Producto producto = null;
-
-            // Reemplaza por tu string de conexión real
-            string connectionString = "Data Source=SERVIDOR;Initial Catalog=TU_BASE;Integrated Security=True;";
-            string query = "SELECT Id, Nombre, Marca, Descripcion, IdProveedor, IdProducto FROM Producto WHERE Id = @Id";
+            string query = "SELECT idProducto, Nombre, Marca, Descripcion, Precio FROM Producto WHERE idProducto = @idProducto";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@Id", 5); // ID fijo
-
-                conn.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                conn.Open(); // Abrir conexión
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    if (reader.Read())
+                    cmd.Parameters.AddWithValue("@idProducto", idProducto); // Parámetro para el ID del producto
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        producto = new Producto(
-                            reader.GetInt32(0),
-                            reader.GetString(1),
-                            reader.GetString(2),
-                            reader.GetString(3),
-                            reader.GetInt32(4),
-                            reader.GetInt32(5)
-                        );
+                        // Si se encuentra un producto con el ID dado
+                        if (reader.Read())
+                        {
+                            producto = new Producto(
+                         reader.GetInt32(0),  // idProducto
+                         reader.GetString(1),  // Nombre
+                         reader.GetString(2),  // Marca
+                         reader.GetString(3),  // Descripcion
+                         reader.GetInt32(4),   // idProveedor (esto es un ejemplo, si tu consulta tiene idProveedor)
+                         reader.GetDecimal(5)  // Precio
+                            );
+
+
+                        }
                     }
                 }
             }
 
-            return producto;
+            return producto; // Retornar el producto encontrado
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace CapaPresentacion.cs
 {
@@ -15,13 +17,17 @@ namespace CapaPresentacion.cs
         public Producto_CPU()
         {
             InitializeComponent();
+            
         }
+        
 
         private void btn_ver_i5_Click(object sender, EventArgs e)
         {
-            ProductoEscogido form = new ProductoEscogido();
-            form.Show();
-            this.Close();
+            // ID para el i5
+            int idProducto = 60; // ID del producto I5
+            ProductoEscogido form = new ProductoEscogido(idProducto); // Crear instancia de ProductoEscogido y pasar el ID
+            form.Show(); // Mostrar el formulario
+            this.Close(); // Cerrar el formulario actual;
         }
 
         private void btn_ver_i7_Click(object sender, EventArgs e)

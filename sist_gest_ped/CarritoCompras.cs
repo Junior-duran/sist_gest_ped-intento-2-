@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using CapaNegocios;
-using static ENT.Producto;
+
 
 namespace CapaPresentacion.cs
 {

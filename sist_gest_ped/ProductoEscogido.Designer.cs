@@ -35,6 +35,7 @@
             label1 = new Label();
             pictureBox2 = new PictureBox();
             richTextBox1 = new RichTextBox();
+            listBox1 = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -99,18 +100,29 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(103, 305);
+            richTextBox1.Location = new Point(32, 78);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(345, 96);
+            richTextBox1.Size = new Size(117, 96);
             richTextBox1.TabIndex = 11;
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 17;
+            listBox1.Location = new Point(140, 305);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(281, 106);
+            listBox1.TabIndex = 12;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // ProductoEscogido
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(547, 499);
+            Controls.Add(listBox1);
             Controls.Add(richTextBox1);
             Controls.Add(pictureBox2);
             Controls.Add(label1);
@@ -133,5 +145,6 @@
         private Label label1;
         private PictureBox pictureBox2;
         private RichTextBox richTextBox1;
+        private ListBox listBox1;
     }
 }
