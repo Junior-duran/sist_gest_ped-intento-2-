@@ -28,137 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoEscogido));
-            button2 = new Button();
-            button3 = new Button();
-            pictureBox1 = new PictureBox();
             label1 = new Label();
-            pictureBox2 = new PictureBox();
-            richTextBox1 = new RichTextBox();
-            listBox1 = new ListBox();
-            lbl = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            button1 = new Button();
             SuspendLayout();
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(255, 128, 255);
-            button2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(136, 437);
-            button2.Name = "button2";
-            button2.Size = new Size(125, 38);
-            button2.TabIndex = 1;
-            button2.Text = "Agregar ";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Blue;
-            button3.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(267, 437);
-            button3.Name = "button3";
-            button3.Size = new Size(124, 38);
-            button3.TabIndex = 2;
-            button3.Text = "Volver";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(155, 25);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(236, 231);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(219, 268);
+            label1.Location = new Point(163, 246);
             label1.Name = "label1";
-            label1.Size = new Size(113, 19);
-            label1.TabIndex = 4;
-            label1.Text = "CPU I5 12600K";
+            label1.Size = new Size(43, 17);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
             // 
-            // pictureBox2
+            // button1
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(439, 12);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(85, 45);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 10;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(32, 78);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(117, 96);
-            richTextBox1.TabIndex = 11;
-            richTextBox1.Text = "";
-            richTextBox1.TextChanged += richTextBox1_TextChanged;
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 17;
-            listBox1.Location = new Point(-140, 38);
-            listBox1.MultiColumn = true;
-            listBox1.Name = "listBox1";
-            listBox1.ScrollAlwaysVisible = true;
-            listBox1.Size = new Size(300, 106);
-            listBox1.TabIndex = 12;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
-            // 
-            // lbl
-            // 
-            lbl.AutoSize = true;
-            lbl.Location = new Point(238, 296);
-            lbl.Name = "lbl";
-            lbl.Size = new Size(43, 17);
-            lbl.TabIndex = 13;
-            lbl.Text = "label2";
+            button1.Location = new Point(163, 395);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 1;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // ProductoEscogido
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(547, 499);
-            Controls.Add(lbl);
-            Controls.Add(listBox1);
-            Controls.Add(richTextBox1);
-            Controls.Add(pictureBox2);
+            ClientSize = new Size(514, 450);
+            Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(pictureBox1);
-            Controls.Add(button3);
-            Controls.Add(button2);
             Name = "ProductoEscogido";
-            Text = "Form1";
+            Text = "ProductoEscogido";
             Load += ProductoEscogido_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button button2;
-        private Button button3;
-        private PictureBox pictureBox1;
+
         private Label label1;
-        private PictureBox pictureBox2;
-        private RichTextBox richTextBox1;
-        private ListBox listBox1;
-        private Label lbl;
+        private Button button1;
     }
 }

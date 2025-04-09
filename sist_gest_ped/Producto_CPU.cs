@@ -23,10 +23,8 @@ namespace CapaPresentacion.cs
 
         private void btn_ver_i5_Click(object sender, EventArgs e)
         {
-            // ID para el i5
-            int idProducto = 60; // ID del producto I5
-            ProductoEscogido form = new ProductoEscogido(idProducto); // Crear instancia de ProductoEscogido y pasar el ID
-            form.Show(); // Mostrar el formulario
+            ProductoEscogido form = new ProductoEscogido();
+            form.Show();
             this.Close(); // Cerrar el formulario actual;
 
         }

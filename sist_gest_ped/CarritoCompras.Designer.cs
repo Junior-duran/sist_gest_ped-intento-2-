@@ -44,21 +44,19 @@
             // 
             dgvCarrito.BackgroundColor = Color.FromArgb(224, 224, 224);
             dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCarrito.Location = new Point(50, 185);
-            dgvCarrito.Margin = new Padding(3, 4, 3, 4);
+            dgvCarrito.Location = new Point(44, 157);
             dgvCarrito.Name = "dgvCarrito";
             dgvCarrito.RowHeadersWidth = 51;
-            dgvCarrito.Size = new Size(826, 387);
+            dgvCarrito.Size = new Size(723, 329);
             dgvCarrito.TabIndex = 0;
             // 
             // btn_AArticulos
             // 
             btn_AArticulos.BackColor = Color.Lime;
             btn_AArticulos.ForeColor = Color.White;
-            btn_AArticulos.Location = new Point(50, 580);
-            btn_AArticulos.Margin = new Padding(3, 4, 3, 4);
+            btn_AArticulos.Location = new Point(44, 493);
             btn_AArticulos.Name = "btn_AArticulos";
-            btn_AArticulos.Size = new Size(198, 42);
+            btn_AArticulos.Size = new Size(173, 36);
             btn_AArticulos.TabIndex = 1;
             btn_AArticulos.Text = "Agregar mas Articulos";
             btn_AArticulos.UseVisualStyleBackColor = false;
@@ -68,10 +66,9 @@
             // 
             btn_RealComp.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_RealComp.ForeColor = Color.Fuchsia;
-            btn_RealComp.Location = new Point(362, 580);
-            btn_RealComp.Margin = new Padding(3, 4, 3, 4);
+            btn_RealComp.Location = new Point(317, 493);
             btn_RealComp.Name = "btn_RealComp";
-            btn_RealComp.Size = new Size(198, 42);
+            btn_RealComp.Size = new Size(173, 36);
             btn_RealComp.TabIndex = 2;
             btn_RealComp.Text = "Realizar Compra";
             btn_RealComp.UseVisualStyleBackColor = true;
@@ -82,32 +79,31 @@
             button3.BackColor = Color.Red;
             button3.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(678, 580);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(593, 493);
             button3.Name = "button3";
-            button3.Size = new Size(198, 42);
+            button3.Size = new Size(173, 36);
             button3.TabIndex = 3;
             button3.Text = "Eliminar Articulo";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(50, 131);
+            label1.Location = new Point(44, 111);
             label1.Name = "label1";
-            label1.Size = new Size(300, 38);
+            label1.Size = new Size(241, 31);
             label1.TabIndex = 4;
             label1.Text = "Carrito de Compra";
             // 
             // pb_Carrito
             // 
             pb_Carrito.Image = (Image)resources.GetObject("pb_Carrito.Image");
-            pb_Carrito.Location = new Point(357, 118);
-            pb_Carrito.Margin = new Padding(3, 4, 3, 4);
+            pb_Carrito.Location = new Point(312, 100);
             pb_Carrito.Name = "pb_Carrito";
-            pb_Carrito.Size = new Size(56, 59);
+            pb_Carrito.Size = new Size(49, 50);
             pb_Carrito.SizeMode = PictureBoxSizeMode.Zoom;
             pb_Carrito.TabIndex = 5;
             pb_Carrito.TabStop = false;
@@ -116,10 +112,9 @@
             // 
             btn_Volver.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Volver.ForeColor = Color.Fuchsia;
-            btn_Volver.Location = new Point(11, 13);
-            btn_Volver.Margin = new Padding(3, 4, 3, 4);
+            btn_Volver.Location = new Point(10, 11);
             btn_Volver.Name = "btn_Volver";
-            btn_Volver.Size = new Size(110, 41);
+            btn_Volver.Size = new Size(96, 35);
             btn_Volver.TabIndex = 11;
             btn_Volver.Text = "Volver";
             btn_Volver.UseVisualStyleBackColor = true;
@@ -127,9 +122,9 @@
             // 
             // CarritoCompras
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 738);
+            ClientSize = new Size(800, 627);
             Controls.Add(btn_Volver);
             Controls.Add(pb_Carrito);
             Controls.Add(label1);
@@ -137,7 +132,6 @@
             Controls.Add(btn_RealComp);
             Controls.Add(dgvCarrito);
             Controls.Add(btn_AArticulos);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "CarritoCompras";
             Text = "CarritoCompras";
             Load += CarritoCompras_Load;
@@ -156,5 +150,6 @@
         private Label label1;
         private PictureBox pb_Carrito;
         private Button btn_Volver;
+
     }
 }

@@ -1,4 +1,4 @@
-﻿using ENT;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,60 +10,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using CapaNegocios;
+using sist_gest_ped;
 
 
 namespace CapaPresentacion.cs
 {
     public partial class CarritoCompras : Form
     {
-        private ProductoNegocio productoNegocio = new ProductoNegocio();
-        private void CargarProductos()
+        private void InitializeDGV()
         {
-            DataTable productos = productoNegocio.ObtenerProductos();
-            dgvCarrito.DataSource = productos;
-            // Agregar la nueva fila al DataGridView
-          
+            // Limpiar cualquier configuración previa
 
+            // Agregar las columnas necesarias
+            dgvCarrito.Columns.Add("ID", "ID");
+            dgvCarrito.Columns.Add("Detalles", "Detalles");
+            InitializeDGV();
         }
 
-        public CarritoCompras()
-        {
-            InitializeComponent();
-            // Inicializar el DataGridView
-         
-        }
         private void btn_AArticulos_Click(object sender, EventArgs e)
         {
-            if (dgvCarrito.SelectedRows.Count > 0)
-            {
-                var filaSeleccionada = dgvCarrito.SelectedRows[0];
-
-                int id = Convert.ToInt32(filaSeleccionada.Cells["Id"].Value);
-                string nombre = filaSeleccionada.Cells["Nombre"].Value.ToString();
-                string marca = filaSeleccionada.Cells["Marca"].Value.ToString();
-                string descripcion = filaSeleccionada.Cells["Descripcion"].Value.ToString();
-                decimal precio = Convert.ToDecimal(filaSeleccionada.Cells["Precio"].Value);
-
-                bool resultado = productoNegocio.InsertarProducto(id, nombre, marca, descripcion, precio);
-
-                if (resultado)
-                {
-                    MessageBox.Show("Producto insertado exitosamente.");
-                }
-                else
-                {
-                    MessageBox.Show("Error al insertar el producto.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, seleccione una fila.");
-            }
-            Menu2 form = new Menu2();
         }
-
-   
-
 
 
         private void btn_RealComp_Click(object sender, EventArgs e)
@@ -82,7 +48,56 @@ namespace CapaPresentacion.cs
 
         private void CarritoCompras_Load(object sender, EventArgs e)
         {
-            
+
+        }
+        public void CargarDatosEnDGV(string detalles)
+        {
+            if (dgvCarrito != null)
+            {
+                // Limpiar las filas existentes antes de agregar nuevas
+                dgvCarrito.Rows.Clear();
+
+                // Separar los detalles del producto por saltos de línea
+                string[] detallesProducto = detalles.Split('\n');
+
+                // Asegurarse de que el número de detalles coincida con el número de columnas
+                if (detallesProducto.Length == dgvCarrito.Columns.Count)
+                {
+                    // Añadir la fila con los detalles
+                    dgvCarrito.Rows.Add(detallesProducto);
+                }
+                else
+                {
+                    MessageBox.Show("El número de detalles no coincide con el número de columnas.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El DataGridView no está inicializado.");
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Verifica si hay una fila seleccionada
+            if (dgvCarrito.SelectedRows.Count > 0)
+            {
+                // Eliminar la fila seleccionada
+                foreach (DataGridViewRow fila in dgvCarrito.SelectedRows)
+                {
+                    // Si es una fila de datos (no una fila de encabezado)
+                    if (!fila.IsNewRow)
+                    {
+                        dgvCarrito.Rows.Remove(fila);
+                    }
+                }
+            }
+            else
+            {
+                // Mostrar un mensaje si no hay ninguna fila seleccionada
+                MessageBox.Show("Por favor, selecciona una fila para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

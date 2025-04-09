@@ -13,13 +13,9 @@ namespace CapaNegocios
             int Id { get; set; } // Id común para todas las entidades
             string Nombre { get; set; } // Nombre común
         }
-    /*public class ProductoNegocio
-    {
-        private ProductoData productoData = new ProductoData();
-
-        public Producto BuscarProducto(int productoId)
-        {
-            return productoData.ObtenerProductoPorID(productoId);
-        }
-    }*/
+   
 }
+
+
+
+
