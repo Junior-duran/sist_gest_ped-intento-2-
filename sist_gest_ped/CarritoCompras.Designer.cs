@@ -32,7 +32,7 @@
             dgvCarrito = new DataGridView();
             btn_AArticulos = new Button();
             btn_RealComp = new Button();
-            button3 = new Button();
+            Art_Eliminar = new Button();
             label1 = new Label();
             pb_Carrito = new PictureBox();
             btn_Volver = new Button();
@@ -74,18 +74,18 @@
             btn_RealComp.UseVisualStyleBackColor = true;
             btn_RealComp.Click += btn_RealComp_Click;
             // 
-            // button3
+            // Art_Eliminar
             // 
-            button3.BackColor = Color.Red;
-            button3.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(593, 493);
-            button3.Name = "button3";
-            button3.Size = new Size(173, 36);
-            button3.TabIndex = 3;
-            button3.Text = "Eliminar Articulo";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            Art_Eliminar.BackColor = Color.Red;
+            Art_Eliminar.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Art_Eliminar.ForeColor = Color.White;
+            Art_Eliminar.Location = new Point(593, 493);
+            Art_Eliminar.Name = "Art_Eliminar";
+            Art_Eliminar.Size = new Size(173, 36);
+            Art_Eliminar.TabIndex = 3;
+            Art_Eliminar.Text = "Eliminar Articulo";
+            Art_Eliminar.UseVisualStyleBackColor = false;
+            Art_Eliminar.Click += button3_Click;
             // 
             // label1
             // 
@@ -128,7 +128,7 @@
             Controls.Add(btn_Volver);
             Controls.Add(pb_Carrito);
             Controls.Add(label1);
-            Controls.Add(button3);
+            Controls.Add(Art_Eliminar);
             Controls.Add(btn_RealComp);
             Controls.Add(dgvCarrito);
             Controls.Add(btn_AArticulos);
@@ -144,7 +144,7 @@
         #endregion
 
         private DataGridView dgvCarrito;
-        private Button button3;
+        private Button Art_Eliminar;
         private Button btn_RealComp;
         private Button btn_AArticulos;
         private Label label1;

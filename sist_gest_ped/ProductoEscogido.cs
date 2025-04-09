@@ -44,13 +44,13 @@ namespace CapaPresentacion.cs
             label1.Text = detalles;
 
             // Creamos una instancia de Form2
-            CarritoCompras CarritoCompras = new CarritoCompras();
+            CarritoCompras carritoCompras = new CarritoCompras();
 
             // Llamamos al método CargarDatosEnDGV de Form2 y le pasamos el texto de los detalles
-            CarritoCompras.CargarDatosEnDGV(detalles);
+            carritoCompras.CargarDatosEnDGV(detalles);
 
             // Mostramos Form2
-            CarritoCompras.Show();
+            carritoCompras.Show();
         }
     }
 }
