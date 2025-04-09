@@ -36,6 +36,7 @@
             pictureBox2 = new PictureBox();
             richTextBox1 = new RichTextBox();
             listBox1 = new ListBox();
+            lbl = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -111,17 +112,29 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 17;
-            listBox1.Location = new Point(140, 305);
+            listBox1.Location = new Point(-140, 38);
+            listBox1.MultiColumn = true;
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(281, 106);
+            listBox1.ScrollAlwaysVisible = true;
+            listBox1.Size = new Size(300, 106);
             listBox1.TabIndex = 12;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // lbl
+            // 
+            lbl.AutoSize = true;
+            lbl.Location = new Point(238, 296);
+            lbl.Name = "lbl";
+            lbl.Size = new Size(43, 17);
+            lbl.TabIndex = 13;
+            lbl.Text = "label2";
             // 
             // ProductoEscogido
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(547, 499);
+            Controls.Add(lbl);
             Controls.Add(listBox1);
             Controls.Add(richTextBox1);
             Controls.Add(pictureBox2);
@@ -146,5 +159,6 @@
         private PictureBox pictureBox2;
         private RichTextBox richTextBox1;
         private ListBox listBox1;
+        private Label lbl;
     }
 }

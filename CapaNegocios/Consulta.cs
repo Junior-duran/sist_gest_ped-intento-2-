@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,4 +31,22 @@ namespace ENT
             return $"Consulta: {Nombre}, Precio: {Precio}, Fecha: {Fecha.ToShortDateString()}, Método de Pago: {MetodoDePago}";
         }
     }
+    // Capa de Negocio
+    public class ProductoNegocio
+    {
+        private ProductoData productoData = new ProductoData();
+
+        // Obtener productos
+        public DataTable ObtenerProductos()
+        {
+            return productoData.ObtenerProducto();
+        }
+
+        // Insertar un producto
+        public bool InsertarProducto(int id, string nombre, string marca, string descripcion, decimal precio)
+        {
+            return productoData.InsertarProducto(id, nombre, marca, descripcion, precio);
+        }
+    }
+
 }

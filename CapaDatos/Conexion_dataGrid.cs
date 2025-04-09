@@ -8,29 +8,67 @@ using System.Data;
 
 namespace CapaDatos
 {
-    class Conexion_dataGrid
+    // Capa de Datos
+    public class ProductoData
     {
-        public class ProductoData
+        private string connectionString = "Server=.;Database=Sist_Gest_Ventas;Trusted_Connection=True;";
+
+        // Método para obtener los productos
+        public DataTable ObtenerProducto()
         {
-            private string connectionString = "Server=.;Sist_Gest_Ventas=;Trusted_Connection=True;";
+            DataTable tabla = new DataTable();
 
-            public DataTable ObtenerProducto()
+            using (SqlConnection conexion = new SqlConnection(connectionString))
             {
-                DataTable tabla = new DataTable();
+                string query = "SELECT * FROM Producto";
 
+                using (SqlCommand comando = new SqlCommand(query, conexion))
+                {
+                    SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                    adaptador.Fill(tabla);
+                }
+            }
+
+            return tabla;
+        }
+
+        // Método para insertar un producto en la base de datos
+        public bool InsertarProducto(int id, string nombre, string marca, string descripcion, decimal precio)
+        {
+            try
+            {
                 using (SqlConnection conexion = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT * FROM Producto";
+                    // Consulta SQL para insertar el producto
+                    string query = "INSERT INTO Producto (Id, Nombre, Marca, Descripcion, Precio) " +
+                                   "VALUES (@Id, @Nombre, @Marca, @Descripcion, @Precio)";
 
                     using (SqlCommand comando = new SqlCommand(query, conexion))
                     {
-                        SqlDataAdapter adaptador = new SqlDataAdapter(comando);
-                        adaptador.Fill(tabla);
+                        // Agregar los parámetros de manera segura
+                        comando.Parameters.AddWithValue("@Id", id);
+                        comando.Parameters.AddWithValue("@Nombre", nombre);
+                        comando.Parameters.AddWithValue("@Marca", marca);
+                        comando.Parameters.AddWithValue("@Descripcion", descripcion);
+                        comando.Parameters.AddWithValue("@Precio", precio);
+
+                        // Abrir la conexión
+                        conexion.Open();
+
+                        // Ejecutar la consulta
+                        int filasAfectadas = comando.ExecuteNonQuery();
+
+                        // Si se afectaron filas, la inserción fue exitosa
+                        return filasAfectadas > 0;
                     }
                 }
-
-                return tabla;
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errore
+                return false;
             }
         }
     }
+
 }
