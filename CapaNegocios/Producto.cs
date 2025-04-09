@@ -1,5 +1,6 @@
 ﻿using CapaNegocios;
 using System.Data.SqlClient;
+using CapaDatos;
 
 public class Producto : IEntidad
 {
@@ -34,41 +35,39 @@ public class Producto : IEntidad
 
     public class ProductoData
     {
-        public string connectionString = "Server=.;Database=Sist_Gest_Ventas;Integrated Security=True;"; // Cadena de conexión
+        // Esta línea debe estar aquí (fuera de los métodos)
+        private string connectionString = "Server=.;Database=Sist_Gest_Ventas;Integrated Security=True;";
 
-        // Método que obtiene los detalles del producto por su ID
-        public Producto ObtenerProductoPorID(int idProducto)
+        public List<Producto> ObtenerTodosLosProductos()
         {
-            Producto producto = null;
-            string query = "SELECT idProducto, Nombre, Marca, Descripcion, Precio FROM Producto WHERE idProducto = @idProducto";
+            List<Producto> productos = new List<Producto>();
+            string query = "SELECT idProducto, Nombre, Marca, Descripcion, idProveedor, Precio FROM Producto";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                conn.Open(); // Abrir conexión
+                conn.Open();
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@idProducto", idProducto); // Parámetro para el ID del producto
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        // Si se encuentra un producto con el ID dado
-                        if (reader.Read())
+                        while (reader.Read())
                         {
-                            producto = new Producto(
-                         reader.GetInt32(0),  // idProducto
-                         reader.GetString(1),  // Nombre
-                         reader.GetString(2),  // Marca
-                         reader.GetString(3),  // Descripcion
-                         reader.GetInt32(4),   // idProveedor (esto es un ejemplo, si tu consulta tiene idProveedor)
-                         reader.GetDecimal(5)  // Precio
-                            );
-
-
+                            productos.Add(new Producto(
+                                reader.GetInt32(0),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3),
+                                reader.GetDecimal(4),
+                                reader.GetDecimal(5)
+                            ));
                         }
                     }
                 }
             }
 
-            return producto; // Retornar el producto encontrado
+            return productos;
         }
     }
+
+
 }

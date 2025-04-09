@@ -6,14 +6,16 @@ namespace CapaPresentacion.cs
 {
     public partial class ProductoEscogido : Form
     {
-        private int _productoId; // Variable para almacenar el ID del producto
+       // private int _productoId; // Variable para almacenar el ID del producto
 
         // ✅ Constructor que recibe el ID del producto
         public ProductoEscogido(int productoId)
+            
         {
             InitializeComponent();
-            _productoId = productoId; // Asignar el ID del producto
-            this.Load += new EventHandler(ProductoEscogido_Load); // Asignar el evento Load
+            CargarProductosEnListBox();
+            //_productoId = productoId; // Asignar el ID del producto
+            //this.Load += new EventHandler(ProductoEscogido_Load); // Asignar el evento Load
         }
 
         // Evento de clic para navegar al carrito de compras
@@ -43,24 +45,7 @@ namespace CapaPresentacion.cs
         {
             listBox1.Items.Clear(); // Limpiar cualquier item previo en el ListBox
             // Llamar al método ObtenerDetalleProductoPorID y agregar los datos al ListBox
-            listBox1.Items.AddRange(ObtenerDetalleProductoPorID(_productoId).Split('\n'));
-        }
-
-        // Método para obtener los detalles del producto desde la base de datos
-        private string ObtenerDetalleProductoPorID(int idProducto)
-        {
-            Producto.ProductoData data = new Producto.ProductoData(); // Instancia de la clase ProductoData
-            Producto producto = data.ObtenerProductoPorID(idProducto); // Obtener el producto desde la base de datos
-
-            // Verificar si el producto fue encontrado y devolver sus detalles
-            if (producto != null)
-            {
-                return producto.ToString(); // Retorna el string con los detalles del producto
-            }
-            else
-            {
-                return "Producto no encontrado."; // Si no se encuentra el producto
-            }
+            
         }
 
         // Evento TextChanged del RichTextBox (actualmente vacío)
@@ -74,6 +59,19 @@ namespace CapaPresentacion.cs
         {
             // Puedes dejar este método vacío si no lo necesitas
         }
+        private void CargarProductosEnListBox()
+        {
+            Producto.ProductoData data = new Producto.ProductoData();
+            List<Producto> productos = data.ObtenerTodosLosProductos();
+
+            listBox1.Items.Clear(); // Limpiar antes
+
+            foreach (var producto in productos)
+            {
+                listBox1.Items.Add(producto.ToString());
+            }
+        }
+
     }
 }
 

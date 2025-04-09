@@ -60,8 +60,6 @@ namespace sist_gest_ped
                 }
             }
         }
-    }
-
-    
+    }   
 }
 

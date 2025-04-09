@@ -17,9 +17,9 @@ namespace CapaPresentacion.cs
         public Producto_CPU()
         {
             InitializeComponent();
-            
+
         }
-        
+
 
         private void btn_ver_i5_Click(object sender, EventArgs e)
         {
@@ -28,6 +28,7 @@ namespace CapaPresentacion.cs
             ProductoEscogido form = new ProductoEscogido(idProducto); // Crear instancia de ProductoEscogido y pasar el ID
             form.Show(); // Mostrar el formulario
             this.Close(); // Cerrar el formulario actual;
+
         }
 
         private void btn_ver_i7_Click(object sender, EventArgs e)
@@ -56,7 +57,12 @@ namespace CapaPresentacion.cs
             Menu2 form = new Menu2();
             form.Show();
             this.Close();
-       
+
+        }
+
+        private void Producto_CPU_Load(object sender, EventArgs e)
+        {
+
         }
 
     }
