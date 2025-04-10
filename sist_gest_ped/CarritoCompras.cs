@@ -11,26 +11,50 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using CapaNegocios;
 using sist_gest_ped;
+using CapaNegocios.CapaNegocios;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 
 namespace CapaPresentacion.cs
 {
     public partial class CarritoCompras : Form
     {
+        public CarritoCompras()
+        {
+            InitializeComponent();
+            InitializeDGV();
+
+        }
         private void InitializeDGV()
         {
             // Limpiar cualquier configuración previa
 
             // Agregar las columnas necesarias
             dgvCarrito.Columns.Add("ID", "ID");
-            dgvCarrito.Columns.Add("Detalles", "Detalles");
-            
-        }
+           
 
+        }
+        private CN_Carrito negocioCarrito = new CN_Carrito();
         private void btn_AArticulos_Click(object sender, EventArgs e)
         {
-        }
+            try
+            {
+                DataTable dt = negocioCarrito.MostrarCarrito();
+                dgvCarrito.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos del carrito: " + ex.Message);
+            }
 
+
+        }
+        public void AgregarDetalleAlCarrito(string detalle)
+        {
+            // Puedes adaptar esto según la estructura de tu DataGridView
+            dgvCarrito.Rows.Add(detalle);
+
+        }
 
         private void btn_RealComp_Click(object sender, EventArgs e)
         {
@@ -48,33 +72,33 @@ namespace CapaPresentacion.cs
 
         private void CarritoCompras_Load(object sender, EventArgs e)
         {
-            dgvCarrito.Columns.Add("ID", "ID Producto");
-            dgvCarrito.Columns.Add("Nombre", "Nombre");
-            dgvCarrito.Columns.Add("Precio", "Precio");
-            dgvCarrito.Columns.Add("Cantidad", "Cantidad");
+   
+           
         }
-        public void CargarDatosEnDGV(string detalles)
-        {
-            if (dgvCarrito != null)
-            {
-                // Separar los detalles por salto de línea
-                string[] detallesProducto = detalles.Split('\n');
 
-                // Validar que los datos coincidan con las columnas del DGV
-                if (detallesProducto.Length == dgvCarrito.Columns.Count)
-                {
-                    dgvCarrito.Rows.Add(detallesProducto);
-                }
-                else
-                {
-                    MessageBox.Show("El número de datos no coincide con las columnas del carrito.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("El DataGridView no está inicializado.");
-            }
-        }
+       
+        /* public void CargarDatosEnDGV(string detalles)
+         {
+             if (dgvCarrito != null)
+             {
+                 // Separar los detalles por salto de línea
+                 string[] detallesProducto = detalles.Split('\n');
+
+                 // Validar que los datos coincidan con las columnas del DGV
+                 if (detallesProducto.Length == dgvCarrito.Columns.Count)
+                 {
+                     dgvCarrito.Rows.Add(detallesProducto);
+                 }
+                 else
+                 {
+                     MessageBox.Show("El número de datos no coincide con las columnas del carrito.");
+                 }
+             }
+             else
+             {
+                 MessageBox.Show("El DataGridView no está inicializado.");
+             }
+         }*/
 
 
         private void button3_Click(object sender, EventArgs e)

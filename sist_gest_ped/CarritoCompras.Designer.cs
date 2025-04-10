@@ -42,11 +42,13 @@
             // 
             // dgvCarrito
             // 
+            dgvCarrito.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCarrito.BackgroundColor = Color.FromArgb(224, 224, 224);
             dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCarrito.Location = new Point(44, 157);
             dgvCarrito.Name = "dgvCarrito";
             dgvCarrito.RowHeadersWidth = 51;
+            dgvCarrito.ScrollBars = ScrollBars.Horizontal;
             dgvCarrito.Size = new Size(723, 329);
             dgvCarrito.TabIndex = 0;
             // 
