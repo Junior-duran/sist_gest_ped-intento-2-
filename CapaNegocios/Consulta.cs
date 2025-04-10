@@ -11,12 +11,13 @@ namespace ENT
 {
     public class Consulta : IEntidad
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public decimal Precio { get; set; }
-        public DateTime Fecha { get; set; }
-        public string MetodoDePago { get; set; }
+        public int Id { get; set; }                 // Identificador único de la consulta
+        public string Nombre { get; set; }          // Nombre de la consulta o del cliente
+        public decimal Precio { get; set; }         // Precio de la consulta
+        public DateTime Fecha { get; set; }         // Fecha en que se realizó la consulta
+        public string MetodoDePago { get; set; }    // Método de pago utilizado (Ej. Efectivo, Tarjeta)
 
+        // Constructor para inicializar todos los atributos
         public Consulta(int id, string nombre, decimal precio, DateTime fecha, string metodoDePago)
         {
             Id = id;
@@ -26,6 +27,7 @@ namespace ENT
             MetodoDePago = metodoDePago;
         }
 
+        // Representación en texto de la clase, útil para depuración o mostrar en interfaces
         public override string ToString()
         {
             return $"Consulta: {Nombre}, Precio: {Precio}, Fecha: {Fecha.ToShortDateString()}, Método de Pago: {MetodoDePago}";

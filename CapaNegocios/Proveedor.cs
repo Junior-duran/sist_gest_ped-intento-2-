@@ -10,15 +10,17 @@ using CapaDatos;
 namespace CapaNegocios
 { 
 
-
+    // Clase que representa un proveedor en el sistema
     public class Proveedor : IEntidad
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Pais { get; set; }
+        public int Id { get; set; }         // Identificador único del proveedor
+        public string Nombre { get; set; }  // Nombre del proveedor
+        public string Pais { get; set; }    // País de origen del proveedor
 
+        // Constructor vacío necesario para ciertas operaciones como serialización o frameworks ORM
         public Proveedor() { }
 
+        // Constructor con parámetros para inicializar todas las propiedades
         public Proveedor(int id, string nombre, string pais)
         {
             Id = id;
@@ -26,6 +28,7 @@ namespace CapaNegocios
             Pais = pais;
         }
 
+        // Representación textual de la clase, útil para mostrar en la interfaz de usuario o logs
         public override string ToString()
         {
             return $"Proveedor: {Nombre}, País: {Pais}";
