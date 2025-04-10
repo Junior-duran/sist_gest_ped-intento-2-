@@ -31,10 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu2));
             panelSideMenu = new Panel();
             btn_Acerca_de = new Button();
-            panel2 = new Panel();
-            button12 = new Button();
-            button13 = new Button();
-            btn_Accesorios = new Button();
             panel1 = new Panel();
             button7 = new Button();
             button9 = new Button();
@@ -49,7 +45,6 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             panelSideMenu.SuspendLayout();
-            panel2.SuspendLayout();
             panel1.SuspendLayout();
             panelMediaSubMenu.SuspendLayout();
             panelLogo.SuspendLayout();
@@ -62,8 +57,6 @@
             panelSideMenu.AutoScroll = true;
             panelSideMenu.BackColor = Color.FromArgb(255, 192, 192);
             panelSideMenu.Controls.Add(btn_Acerca_de);
-            panelSideMenu.Controls.Add(panel2);
-            panelSideMenu.Controls.Add(btn_Accesorios);
             panelSideMenu.Controls.Add(panel1);
             panelSideMenu.Controls.Add(btn_Dispositivo);
             panelSideMenu.Controls.Add(panelMediaSubMenu);
@@ -81,75 +74,15 @@
             btn_Acerca_de.FlatAppearance.BorderSize = 0;
             btn_Acerca_de.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_Acerca_de.ForeColor = Color.Blue;
-            btn_Acerca_de.Location = new Point(0, 576);
+            btn_Acerca_de.Location = new Point(0, 438);
             btn_Acerca_de.Name = "btn_Acerca_de";
             btn_Acerca_de.Padding = new Padding(10, 0, 0, 0);
-            btn_Acerca_de.Size = new Size(233, 45);
+            btn_Acerca_de.Size = new Size(250, 71);
             btn_Acerca_de.TabIndex = 7;
             btn_Acerca_de.Text = "Acerca de...";
             btn_Acerca_de.TextAlign = ContentAlignment.MiddleLeft;
             btn_Acerca_de.UseVisualStyleBackColor = true;
             btn_Acerca_de.Click += btn_Acerca_de_Click;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(255, 192, 255);
-            panel2.Controls.Add(button12);
-            panel2.Controls.Add(button13);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 483);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(233, 93);
-            panel2.TabIndex = 6;
-            // 
-            // button12
-            // 
-            button12.Dock = DockStyle.Top;
-            button12.FlatAppearance.BorderSize = 0;
-            button12.FlatStyle = FlatStyle.Flat;
-            button12.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button12.ForeColor = Color.Blue;
-            button12.Location = new Point(0, 40);
-            button12.Name = "button12";
-            button12.Padding = new Padding(35, 0, 0, 0);
-            button12.Size = new Size(233, 40);
-            button12.TabIndex = 1;
-            button12.Text = "BOCINAS";
-            button12.TextAlign = ContentAlignment.MiddleLeft;
-            button12.UseVisualStyleBackColor = true;
-            button12.Click += button12_Click;
-            // 
-            // button13
-            // 
-            button13.Dock = DockStyle.Top;
-            button13.FlatAppearance.BorderSize = 0;
-            button13.FlatStyle = FlatStyle.Flat;
-            button13.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button13.ForeColor = Color.Blue;
-            button13.Location = new Point(0, 0);
-            button13.Name = "button13";
-            button13.Padding = new Padding(35, 0, 0, 0);
-            button13.Size = new Size(233, 40);
-            button13.TabIndex = 0;
-            button13.Text = "AUDIFONOS";
-            button13.TextAlign = ContentAlignment.MiddleLeft;
-            button13.UseVisualStyleBackColor = true;
-            button13.Click += button13_Click;
-            // 
-            // btn_Accesorios
-            // 
-            btn_Accesorios.Dock = DockStyle.Top;
-            btn_Accesorios.FlatAppearance.BorderSize = 0;
-            btn_Accesorios.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Accesorios.ForeColor = Color.Blue;
-            btn_Accesorios.Location = new Point(0, 438);
-            btn_Accesorios.Name = "btn_Accesorios";
-            btn_Accesorios.Padding = new Padding(10, 0, 0, 0);
-            btn_Accesorios.Size = new Size(233, 45);
-            btn_Accesorios.TabIndex = 5;
-            btn_Accesorios.Text = "Accesorios";
-            btn_Accesorios.TextAlign = ContentAlignment.MiddleLeft;
-            btn_Accesorios.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -159,7 +92,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 352);
             panel1.Name = "panel1";
-            panel1.Size = new Size(233, 86);
+            panel1.Size = new Size(250, 86);
             panel1.TabIndex = 4;
             // 
             // button7
@@ -172,7 +105,7 @@
             button7.Location = new Point(0, 40);
             button7.Name = "button7";
             button7.Padding = new Padding(35, 0, 0, 0);
-            button7.Size = new Size(233, 40);
+            button7.Size = new Size(250, 40);
             button7.TabIndex = 2;
             button7.Text = "TELEFONOS";
             button7.TextAlign = ContentAlignment.MiddleLeft;
@@ -189,7 +122,7 @@
             button9.Location = new Point(0, 0);
             button9.Name = "button9";
             button9.Padding = new Padding(35, 0, 0, 0);
-            button9.Size = new Size(233, 40);
+            button9.Size = new Size(250, 40);
             button9.TabIndex = 0;
             button9.Text = "LAPTOS";
             button9.TextAlign = ContentAlignment.MiddleLeft;
@@ -205,7 +138,7 @@
             btn_Dispositivo.Location = new Point(0, 307);
             btn_Dispositivo.Name = "btn_Dispositivo";
             btn_Dispositivo.Padding = new Padding(10, 0, 0, 0);
-            btn_Dispositivo.Size = new Size(233, 45);
+            btn_Dispositivo.Size = new Size(250, 45);
             btn_Dispositivo.TabIndex = 3;
             btn_Dispositivo.Text = "Dispositivo";
             btn_Dispositivo.TextAlign = ContentAlignment.MiddleLeft;
@@ -221,7 +154,7 @@
             panelMediaSubMenu.Dock = DockStyle.Top;
             panelMediaSubMenu.Location = new Point(0, 145);
             panelMediaSubMenu.Name = "panelMediaSubMenu";
-            panelMediaSubMenu.Size = new Size(233, 162);
+            panelMediaSubMenu.Size = new Size(250, 162);
             panelMediaSubMenu.TabIndex = 2;
             // 
             // button4
@@ -234,7 +167,7 @@
             button4.Location = new Point(0, 120);
             button4.Name = "button4";
             button4.Padding = new Padding(35, 0, 0, 0);
-            button4.Size = new Size(233, 40);
+            button4.Size = new Size(250, 40);
             button4.TabIndex = 3;
             button4.Text = "SSD";
             button4.TextAlign = ContentAlignment.MiddleLeft;
@@ -251,7 +184,7 @@
             button3.Location = new Point(0, 80);
             button3.Name = "button3";
             button3.Padding = new Padding(35, 0, 0, 0);
-            button3.Size = new Size(233, 40);
+            button3.Size = new Size(250, 40);
             button3.TabIndex = 2;
             button3.Text = "RAM";
             button3.TextAlign = ContentAlignment.MiddleLeft;
@@ -268,7 +201,7 @@
             button2.Location = new Point(0, 40);
             button2.Name = "button2";
             button2.Padding = new Padding(35, 0, 0, 0);
-            button2.Size = new Size(233, 40);
+            button2.Size = new Size(250, 40);
             button2.TabIndex = 1;
             button2.Text = "GPU";
             button2.TextAlign = ContentAlignment.MiddleLeft;
@@ -285,7 +218,7 @@
             button1.Location = new Point(0, 0);
             button1.Name = "button1";
             button1.Padding = new Padding(35, 0, 0, 0);
-            button1.Size = new Size(233, 40);
+            button1.Size = new Size(250, 40);
             button1.TabIndex = 0;
             button1.Text = "CPU";
             button1.TextAlign = ContentAlignment.MiddleLeft;
@@ -301,7 +234,7 @@
             btn_Media.Location = new Point(0, 100);
             btn_Media.Name = "btn_Media";
             btn_Media.Padding = new Padding(10, 0, 0, 0);
-            btn_Media.Size = new Size(233, 45);
+            btn_Media.Size = new Size(250, 45);
             btn_Media.TabIndex = 1;
             btn_Media.Text = "Componetes";
             btn_Media.TextAlign = ContentAlignment.MiddleLeft;
@@ -314,18 +247,19 @@
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(233, 100);
+            panelLogo.Size = new Size(250, 100);
             panelLogo.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-24, 3);
+            pictureBox1.Location = new Point(0, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(257, 82);
+            pictureBox1.Size = new Size(247, 82);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // pictureBox2
             // 
@@ -351,7 +285,6 @@
             Name = "Menu2";
             Text = "Menu2";
             panelSideMenu.ResumeLayout(false);
-            panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panelMediaSubMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
@@ -375,10 +308,6 @@
         private Button button9;
         private Button btn_Dispositivo;
         private Button btn_Acerca_de;
-        private Panel panel2;
-        private Button button12;
-        private Button button13;
-        private Button btn_Accesorios;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
     }

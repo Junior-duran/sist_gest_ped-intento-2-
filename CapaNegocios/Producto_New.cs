@@ -27,7 +27,6 @@ namespace CapaNegocio
                        $"ID: {producto.IdProducto}\n" +
                        $"Nombre: {producto.Nombre}\n" +
                        $"Marca: {producto.Marca}\n" +
-                       $"Descripción: {producto.Descripcion}\n" +
                        $"Precio: {producto.Precio:C}";
             }
             else
@@ -36,6 +35,26 @@ namespace CapaNegocio
                 return "Producto no encontrado.";
             }
         }
+        // En ProductoNegocio.cs
+        public Producto ObtenerProductoPorId(int idProducto)
+        {
+            return productoDatos.ObtenerProductoPorId(idProducto);
+        }
+        public static class CarritoGlobal
+        {
+            public static List<ProductoDatos.Producto> Productos = new List<ProductoDatos.Producto>();
+
+            public static void AgregarProducto(ProductoDatos.Producto producto)
+            {
+                Productos.Add(producto);
+            }
+
+            public static void Limpiar()
+            {
+                Productos.Clear();
+            }
+        }
+
     }
 }
 

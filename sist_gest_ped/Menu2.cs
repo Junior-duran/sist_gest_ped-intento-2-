@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion.cs
 {
+   
     public partial class Menu2 : Form
     {
         public Menu2()
         {
             InitializeComponent();
             custimizarDiseño();
+           
         }
         private void custimizarDiseño()
         {
@@ -41,7 +43,7 @@ namespace CapaPresentacion.cs
                 subMenu.Visible = true;
             }
             else
-                subMenu.Visible = false;
+                subMenu.Visible = true;
         }
 
         private void btn_Media_Click(object sender, EventArgs e)
@@ -68,17 +70,12 @@ namespace CapaPresentacion.cs
 
         private void button13_Click(object sender, EventArgs e)
         {
-            Producto_Audifonos form = new Producto_Audifonos();
-            form.Show();
-            this.Close();
+           
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
 
-            Producto_Bocina form = new Producto_Bocina();
-            form.Show();
-            this.Close();
 
         }
 
@@ -127,7 +124,14 @@ namespace CapaPresentacion.cs
         private void btn_Acerca_de_Click(object sender, EventArgs e)
         {
             Acerca_de form = new Acerca_de();
-            form.Show(); 
+            form.Show();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            CarritoCompras form = new CarritoCompras();
+            form.Show();
             this.Close();
         }
     }

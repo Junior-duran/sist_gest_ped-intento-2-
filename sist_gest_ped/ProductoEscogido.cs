@@ -1,4 +1,5 @@
-﻿using CapaNegocio;
+﻿
+using CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,18 +10,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static CapaNegocio.ProductoNegocio;
 
 namespace CapaPresentacion.cs
 {
     public partial class ProductoEscogido : Form
     {
+        private CarritoCompras carritoForm = new CarritoCompras(); // Solo una vez
         private ProductoNegocio productoNegocio;
 
         public ProductoEscogido()
         {
             InitializeComponent();
             productoNegocio = new ProductoNegocio();
-
+           
+          
         }
 
 
@@ -35,43 +39,52 @@ namespace CapaPresentacion.cs
             // Mostrar los detalles en el Label
             label1.Text = detallesProducto;
         }
-        /*public void MostrarDetalles(int id, string marca, string nombre, decimal precio)
-        {
-            Label2.Text = "ID: " + id.ToString();
-            Label3.Text = "Marca: " + marca;
-            Label4.Text = "Nombre: " + nombre;
-            Label5Precio.Text = "Precio: $" + precio.ToString("0.00");
-        }*/
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int idProducto = 1;  // Esto puede ser asignado de forma dinámica en tu código
+            int idProducto = 1; // Este sería dinámico en tu caso
+            var producto = productoNegocio.ObtenerProductoPorId(idProducto);
 
-            // Obtenemos los detalles del producto
-            string detalles = productoNegocio.ObtenerDetallesProducto(idProducto);
+            if (producto != null)
+            {
+                CarritoGlobal.AgregarProducto(producto);
+                MessageBox.Show("Producto añadido al carrito.");
+            }
+            else
+            {
+                MessageBox.Show("Producto no encontrado.");
+            }
+            if (Application.OpenForms["CarritoCompras"] is CarritoCompras carritoForm)
+            {
+                carritoForm.ActualizarVista(); // Esto es correcto
+            }
 
-            // Asignamos el texto al Label
-            label1.Text = detalles;
-           MessageBox.Show("Producto añadido al carrito.");
-
-            // Creamos una instancia de Form2
-            //CarritoCompras carritoCompras = new CarritoCompras();
-           // o cualquier info que quieras pasar
-
-            // Instanciar o referenciar el formulario destino
-            CarritoCompras formCarrito = new CarritoCompras();
-
-            // Pasar el detalle al método
-            formCarrito.AgregarDetalleAlCarrito(detalles);
-
-            // Mostrar el formulario
-            formCarrito.Show();
-            // Llamamos al método CargarDatosEnDGV de Form2 y le pasamos el texto de los detalles
-            //carritoCompras.CargarDatosEnDGV(detalles);
-
-            // Mostramos Form2
-            //carritoCompras.Show();
         }
+
+
+
+        private void AgregarProductoAlCarrito(int idProducto)
+        {
+            var producto = productoNegocio.ObtenerProductoPorId(idProducto);
+
+            if (producto != null)
+            {
+                // Puedes mostrarlo en un Label, si quieres
+                label1.Text = $"ID: {producto.IdProducto}\nNombre: {producto.Nombre}\nMarca: {producto.Marca}\nPrecio: {producto.Precio:C}";
+
+                // Mostrar mensaje
+                MessageBox.Show("Producto añadido al carrito.");
+
+                // Agregar al DataGridView del carrito
+                carritoForm.AgregarProducto(producto);
+            }
+            else
+            {
+                MessageBox.Show("Producto no encontrado.");
+            }
+        }
+
 
 
         private void panel1_Paint(object sender, PaintEventArgs e)

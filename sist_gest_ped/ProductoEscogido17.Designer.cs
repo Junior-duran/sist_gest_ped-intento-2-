@@ -33,7 +33,6 @@
             button3 = new Button();
             button2 = new Button();
             label3 = new Label();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -80,29 +79,18 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(14, 358);
+            label3.Location = new Point(243, 335);
             label3.Name = "label3";
-            label3.Size = new Size(497, 57);
+            label3.Size = new Size(21, 19);
             label3.TabIndex = 49;
-            label3.Text = "Samsung Galaxy S25 Ultra con procesador Exynos 2200 o Snapdragon 8 Gen 2\r\n,pantalla AMOLED 6.8” 120Hz ,cámara de 200MP y batería de 5000mAh. \r\nGran rendimiento y fotografía avanzada.";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(178, 315);
-            label1.Name = "label1";
-            label1.Size = new Size(154, 19);
-            label1.TabIndex = 50;
-            label1.Text = "GALAXY S25 ULTRA";
+            label3.Text = "...";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(105, 31);
+            pictureBox1.Location = new Point(132, 37);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(264, 281);
+            pictureBox1.Size = new Size(243, 263);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 51;
             pictureBox1.TabStop = false;
@@ -113,13 +101,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(523, 510);
             Controls.Add(pictureBox1);
-            Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(button3);
             Controls.Add(pictureBox2);
             Name = "ProductoEscogido17";
             Text = "ProductoEscogido17";
+            Load += ProductoEscogido17_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -132,7 +120,6 @@
         private Button button3;
         private Button button2;
         private Label label3;
-        private Label label1;
         private PictureBox pictureBox1;
     }
 }

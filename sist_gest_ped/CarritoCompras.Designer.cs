@@ -36,6 +36,7 @@
             label1 = new Label();
             pb_Carrito = new PictureBox();
             btn_Volver = new Button();
+            LblTotal1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pb_Carrito).BeginInit();
             SuspendLayout();
@@ -47,8 +48,9 @@
             dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCarrito.Location = new Point(44, 157);
             dgvCarrito.Name = "dgvCarrito";
+            dgvCarrito.ReadOnly = true;
             dgvCarrito.RowHeadersWidth = 51;
-            dgvCarrito.ScrollBars = ScrollBars.Horizontal;
+            dgvCarrito.ScrollBars = ScrollBars.Vertical;
             dgvCarrito.Size = new Size(723, 329);
             dgvCarrito.TabIndex = 0;
             // 
@@ -56,7 +58,7 @@
             // 
             btn_AArticulos.BackColor = Color.Lime;
             btn_AArticulos.ForeColor = Color.White;
-            btn_AArticulos.Location = new Point(44, 493);
+            btn_AArticulos.Location = new Point(44, 528);
             btn_AArticulos.Name = "btn_AArticulos";
             btn_AArticulos.Size = new Size(173, 36);
             btn_AArticulos.TabIndex = 1;
@@ -68,7 +70,7 @@
             // 
             btn_RealComp.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_RealComp.ForeColor = Color.Fuchsia;
-            btn_RealComp.Location = new Point(317, 493);
+            btn_RealComp.Location = new Point(293, 528);
             btn_RealComp.Name = "btn_RealComp";
             btn_RealComp.Size = new Size(173, 36);
             btn_RealComp.TabIndex = 2;
@@ -81,7 +83,7 @@
             Art_Eliminar.BackColor = Color.Red;
             Art_Eliminar.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Art_Eliminar.ForeColor = Color.White;
-            Art_Eliminar.Location = new Point(593, 493);
+            Art_Eliminar.Location = new Point(570, 529);
             Art_Eliminar.Name = "Art_Eliminar";
             Art_Eliminar.Size = new Size(173, 36);
             Art_Eliminar.TabIndex = 3;
@@ -122,11 +124,21 @@
             btn_Volver.UseVisualStyleBackColor = true;
             btn_Volver.Click += btn_Volver_Click;
             // 
+            // LblTotal1
+            // 
+            LblTotal1.AutoSize = true;
+            LblTotal1.Location = new Point(44, 503);
+            LblTotal1.Name = "LblTotal1";
+            LblTotal1.Size = new Size(43, 17);
+            LblTotal1.TabIndex = 12;
+            LblTotal1.Text = "label2";
+            // 
             // CarritoCompras
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 627);
+            Controls.Add(LblTotal1);
             Controls.Add(btn_Volver);
             Controls.Add(pb_Carrito);
             Controls.Add(label1);
@@ -152,6 +164,6 @@
         private Label label1;
         private PictureBox pb_Carrito;
         private Button btn_Volver;
-
+        private Label LblTotal1;
     }
 }
