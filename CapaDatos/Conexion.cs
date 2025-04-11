@@ -10,10 +10,10 @@ namespace CapaDatos
 {
     public class CD_Conexion
     {
-        // Objeto SqlConnection con cadena de conexión a la base de datos local
+        //TODO: Objeto SqlConnection con cadena de conexión a la base de datos local
         private SqlConnection Conexion = new SqlConnection("Server=.;Database=Sist_Gest_Ventas;Integrated Security=True;");
 
-        // Método para abrir la conexión si está cerrada
+        //TODO: Método para abrir la conexión si está cerrada
         public SqlConnection AbrirConexion()
         {
             if (Conexion.State == ConnectionState.Closed) // Se abre la conexión si está cerrada

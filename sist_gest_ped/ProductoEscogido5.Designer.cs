@@ -34,6 +34,12 @@
             pictureBox1 = new PictureBox();
             button3 = new Button();
             button2 = new Button();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            panel6 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -41,9 +47,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(432, 12);
+            pictureBox2.Location = new Point(450, 41);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(85, 45);
+            pictureBox2.Size = new Size(63, 45);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 21;
             pictureBox2.TabStop = false;
@@ -53,7 +59,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(245, 296);
+            label2.Location = new Point(173, 253);
             label2.Name = "label2";
             label2.Size = new Size(13, 19);
             label2.TabIndex = 16;
@@ -62,32 +68,32 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(143, 25);
+            pictureBox1.Location = new Point(173, 41);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(236, 231);
+            pictureBox1.Size = new Size(191, 190);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 14;
             pictureBox1.TabStop = false;
             // 
             // button3
             // 
-            button3.BackColor = Color.Blue;
-            button3.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.BackColor = Color.FromArgb(64, 64, 64);
+            button3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(265, 442);
+            button3.Location = new Point(31, 41);
             button3.Name = "button3";
-            button3.Size = new Size(124, 38);
+            button3.Size = new Size(56, 38);
             button3.TabIndex = 13;
-            button3.Text = "Volver";
+            button3.Text = "<";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(255, 128, 255);
-            button2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.BackColor = Color.FromArgb(64, 64, 64);
+            button2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(117, 442);
+            button2.Location = new Point(202, 418);
             button2.Name = "button2";
             button2.Size = new Size(125, 38);
             button2.TabIndex = 12;
@@ -95,11 +101,71 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // panel1
+            // 
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(544, 25);
+            panel1.TabIndex = 22;
+            panel1.Paint += panel1_Paint;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Right;
+            panel2.Location = new Point(519, 25);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(25, 472);
+            panel2.TabIndex = 23;
+            panel2.Paint += panel2_Paint;
+            // 
+            // panel3
+            // 
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(0, 472);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(519, 25);
+            panel3.TabIndex = 24;
+            panel3.Paint += panel3_Paint;
+            // 
+            // panel4
+            // 
+            panel4.Dock = DockStyle.Left;
+            panel4.Location = new Point(0, 25);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(25, 447);
+            panel4.TabIndex = 25;
+            panel4.Paint += panel4_Paint;
+            // 
+            // panel5
+            // 
+            panel5.Dock = DockStyle.Top;
+            panel5.Location = new Point(25, 25);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(494, 10);
+            panel5.TabIndex = 26;
+            panel5.Paint += panel5_Paint;
+            // 
+            // panel6
+            // 
+            panel6.Dock = DockStyle.Bottom;
+            panel6.Location = new Point(25, 462);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(494, 10);
+            panel6.TabIndex = 27;
+            panel6.Paint += panel6_Paint;
+            // 
             // ProductoEscogido5
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(544, 497);
+            Controls.Add(panel6);
+            Controls.Add(panel5);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Controls.Add(pictureBox2);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
@@ -120,5 +186,11 @@
         private PictureBox pictureBox1;
         private Button button3;
         private Button button2;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
     }
 }

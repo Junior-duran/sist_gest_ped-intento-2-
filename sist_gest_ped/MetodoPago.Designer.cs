@@ -42,6 +42,12 @@
             label3 = new Label();
             label4 = new Label();
             errorProvider1 = new ErrorProvider(components);
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            panel6 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
@@ -49,7 +55,7 @@
             // textBox1
             // 
             textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(89, 163);
+            textBox1.Location = new Point(89, 200);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(242, 25);
             textBox1.TabIndex = 0;
@@ -57,7 +63,7 @@
             // textBox2
             // 
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(89, 213);
+            textBox2.Location = new Point(89, 250);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(242, 25);
             textBox2.TabIndex = 1;
@@ -65,16 +71,16 @@
             // textBox3
             // 
             textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(89, 263);
+            textBox3.Location = new Point(89, 300);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(242, 25);
             textBox3.TabIndex = 2;
             // 
             // comboBox1
             // 
-            comboBox1.ForeColor = Color.Fuchsia;
+            comboBox1.ForeColor = Color.Gray;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(89, 303);
+            comboBox1.Location = new Point(89, 345);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(242, 25);
             comboBox1.TabIndex = 3;
@@ -83,7 +89,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(132, 28);
+            pictureBox1.Location = new Point(132, 59);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(165, 88);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -93,9 +99,9 @@
             // button1
             // 
             button1.BackColor = Color.White;
-            button1.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Fuchsia;
-            button1.Location = new Point(132, 358);
+            button1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(132, 394);
             button1.Name = "button1";
             button1.Size = new Size(165, 31);
             button1.TabIndex = 12;
@@ -105,10 +111,10 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.White;
-            button2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Blue;
-            button2.Location = new Point(132, 410);
+            button2.BackColor = Color.FromArgb(64, 64, 64);
+            button2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(132, 446);
             button2.Name = "button2";
             button2.Size = new Size(165, 31);
             button2.TabIndex = 13;
@@ -120,8 +126,8 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Fuchsia;
-            label1.Location = new Point(176, 141);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(176, 178);
             label1.Name = "label1";
             label1.Size = new Size(60, 19);
             label1.TabIndex = 14;
@@ -131,8 +137,8 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Fuchsia;
-            label2.Location = new Point(176, 191);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(176, 228);
             label2.Name = "label2";
             label2.Size = new Size(52, 19);
             label2.TabIndex = 15;
@@ -142,8 +148,8 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Fuchsia;
-            label3.Location = new Point(176, 241);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(176, 278);
             label3.Name = "label3";
             label3.Size = new Size(53, 19);
             label3.TabIndex = 16;
@@ -163,11 +169,71 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
+            // panel1
+            // 
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(428, 20);
+            panel1.TabIndex = 18;
+            panel1.Paint += panel1_Paint;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Right;
+            panel2.Location = new Point(408, 20);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(20, 505);
+            panel2.TabIndex = 19;
+            panel2.Paint += panel2_Paint;
+            // 
+            // panel3
+            // 
+            panel3.Dock = DockStyle.Left;
+            panel3.Location = new Point(0, 20);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(20, 505);
+            panel3.TabIndex = 20;
+            panel3.Paint += panel3_Paint;
+            // 
+            // panel4
+            // 
+            panel4.Dock = DockStyle.Bottom;
+            panel4.Location = new Point(20, 505);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(388, 20);
+            panel4.TabIndex = 21;
+            panel4.Paint += panel4_Paint;
+            // 
+            // panel5
+            // 
+            panel5.Dock = DockStyle.Bottom;
+            panel5.Location = new Point(20, 495);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(388, 10);
+            panel5.TabIndex = 22;
+            panel5.Paint += panel5_Paint;
+            // 
+            // panel6
+            // 
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(20, 20);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(388, 10);
+            panel6.TabIndex = 23;
+            panel6.Paint += panel6_Paint;
+            // 
             // MetodoPago
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(428, 525);
+            Controls.Add(panel6);
+            Controls.Add(panel5);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -201,5 +267,11 @@
         private Label label3;
         private Label label4;
         private ErrorProvider errorProvider1;
+        private Panel panel5;
+        private Panel panel4;
+        private Panel panel3;
+        private Panel panel2;
+        private Panel panel1;
+        private Panel panel6;
     }
 }

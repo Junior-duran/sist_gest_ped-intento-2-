@@ -55,7 +55,7 @@
             // panelSideMenu
             // 
             panelSideMenu.AutoScroll = true;
-            panelSideMenu.BackColor = Color.FromArgb(255, 192, 192);
+            panelSideMenu.BackColor = Color.FromArgb(0, 0, 64);
             panelSideMenu.Controls.Add(btn_Acerca_de);
             panelSideMenu.Controls.Add(panel1);
             panelSideMenu.Controls.Add(btn_Dispositivo);
@@ -73,7 +73,7 @@
             btn_Acerca_de.Dock = DockStyle.Top;
             btn_Acerca_de.FlatAppearance.BorderSize = 0;
             btn_Acerca_de.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Acerca_de.ForeColor = Color.Blue;
+            btn_Acerca_de.ForeColor = Color.Black;
             btn_Acerca_de.Location = new Point(0, 438);
             btn_Acerca_de.Name = "btn_Acerca_de";
             btn_Acerca_de.Padding = new Padding(10, 0, 0, 0);
@@ -86,7 +86,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(255, 192, 255);
+            panel1.BackColor = Color.FromArgb(0, 0, 64);
             panel1.Controls.Add(button7);
             panel1.Controls.Add(button9);
             panel1.Dock = DockStyle.Top;
@@ -97,11 +97,12 @@
             // 
             // button7
             // 
+            button7.BackColor = Color.FromArgb(0, 0, 64);
             button7.Dock = DockStyle.Top;
             button7.FlatAppearance.BorderSize = 0;
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.ForeColor = Color.Blue;
+            button7.ForeColor = Color.Yellow;
             button7.Location = new Point(0, 40);
             button7.Name = "button7";
             button7.Padding = new Padding(35, 0, 0, 0);
@@ -109,16 +110,17 @@
             button7.TabIndex = 2;
             button7.Text = "TELEFONOS";
             button7.TextAlign = ContentAlignment.MiddleLeft;
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
             // button9
             // 
+            button9.BackColor = Color.FromArgb(0, 0, 64);
             button9.Dock = DockStyle.Top;
             button9.FlatAppearance.BorderSize = 0;
             button9.FlatStyle = FlatStyle.Flat;
             button9.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button9.ForeColor = Color.Blue;
+            button9.ForeColor = Color.Yellow;
             button9.Location = new Point(0, 0);
             button9.Name = "button9";
             button9.Padding = new Padding(35, 0, 0, 0);
@@ -126,7 +128,7 @@
             button9.TabIndex = 0;
             button9.Text = "LAPTOS";
             button9.TextAlign = ContentAlignment.MiddleLeft;
-            button9.UseVisualStyleBackColor = true;
+            button9.UseVisualStyleBackColor = false;
             button9.Click += button9_Click;
             // 
             // btn_Dispositivo
@@ -134,7 +136,7 @@
             btn_Dispositivo.Dock = DockStyle.Top;
             btn_Dispositivo.FlatAppearance.BorderSize = 0;
             btn_Dispositivo.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Dispositivo.ForeColor = Color.Blue;
+            btn_Dispositivo.ForeColor = Color.Black;
             btn_Dispositivo.Location = new Point(0, 307);
             btn_Dispositivo.Name = "btn_Dispositivo";
             btn_Dispositivo.Padding = new Padding(10, 0, 0, 0);
@@ -159,11 +161,12 @@
             // 
             // button4
             // 
+            button4.BackColor = Color.FromArgb(0, 0, 64);
             button4.Dock = DockStyle.Top;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.Blue;
+            button4.ForeColor = Color.Yellow;
             button4.Location = new Point(0, 120);
             button4.Name = "button4";
             button4.Padding = new Padding(35, 0, 0, 0);
@@ -171,16 +174,17 @@
             button4.TabIndex = 3;
             button4.Text = "SSD";
             button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // button3
             // 
+            button3.BackColor = Color.FromArgb(0, 0, 64);
             button3.Dock = DockStyle.Top;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.Blue;
+            button3.ForeColor = Color.Yellow;
             button3.Location = new Point(0, 80);
             button3.Name = "button3";
             button3.Padding = new Padding(35, 0, 0, 0);
@@ -188,16 +192,17 @@
             button3.TabIndex = 2;
             button3.Text = "RAM";
             button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.FromArgb(0, 0, 64);
             button2.Dock = DockStyle.Top;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Blue;
+            button2.ForeColor = Color.Yellow;
             button2.Location = new Point(0, 40);
             button2.Name = "button2";
             button2.Padding = new Padding(35, 0, 0, 0);
@@ -205,16 +210,17 @@
             button2.TabIndex = 1;
             button2.Text = "GPU";
             button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(0, 0, 64);
             button1.Dock = DockStyle.Top;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Blue;
+            button1.ForeColor = Color.Yellow;
             button1.Location = new Point(0, 0);
             button1.Name = "button1";
             button1.Padding = new Padding(35, 0, 0, 0);
@@ -222,7 +228,7 @@
             button1.TabIndex = 0;
             button1.Text = "CPU";
             button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // btn_Media
@@ -230,7 +236,7 @@
             btn_Media.Dock = DockStyle.Top;
             btn_Media.FlatAppearance.BorderSize = 0;
             btn_Media.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Media.ForeColor = Color.Blue;
+            btn_Media.ForeColor = Color.Black;
             btn_Media.Location = new Point(0, 100);
             btn_Media.Name = "btn_Media";
             btn_Media.Padding = new Padding(10, 0, 0, 0);
@@ -243,6 +249,7 @@
             // 
             // panelLogo
             // 
+            panelLogo.BackColor = Color.FromArgb(0, 0, 64);
             panelLogo.Controls.Add(pictureBox1);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);

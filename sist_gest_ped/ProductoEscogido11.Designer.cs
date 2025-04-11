@@ -34,6 +34,12 @@
             button2 = new Button();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            panel6 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -42,36 +48,34 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(337, 369);
+            label3.Location = new Point(199, 282);
             label3.Name = "label3";
-            label3.Size = new Size(25, 22);
+            label3.Size = new Size(21, 19);
             label3.TabIndex = 28;
             label3.Text = "...";
             label3.Click += label3_Click;
             // 
             // button3
             // 
-            button3.BackColor = Color.Blue;
-            button3.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.BackColor = Color.FromArgb(64, 64, 64);
+            button3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(381, 499);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(31, 41);
             button3.Name = "button3";
-            button3.Size = new Size(142, 46);
+            button3.Size = new Size(51, 42);
             button3.TabIndex = 29;
-            button3.Text = "Volver";
+            button3.Text = "<";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(255, 128, 255);
+            button2.BackColor = Color.FromArgb(64, 64, 64);
             button2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(184, 499);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(233, 430);
             button2.Name = "button2";
-            button2.Size = new Size(143, 46);
+            button2.Size = new Size(125, 39);
             button2.TabIndex = 30;
             button2.Text = "Agregar ";
             button2.UseVisualStyleBackColor = false;
@@ -80,10 +84,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(212, 61);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(199, 61);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(253, 239);
+            pictureBox1.Size = new Size(221, 203);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 31;
             pictureBox1.TabStop = false;
@@ -91,26 +94,84 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(603, 13);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(536, 41);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(97, 53);
+            pictureBox2.Size = new Size(56, 42);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 32;
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
             // 
+            // panel1
+            // 
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(598, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(25, 510);
+            panel1.TabIndex = 33;
+            panel1.Paint += panel1_Paint;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(598, 25);
+            panel2.TabIndex = 34;
+            panel2.Paint += panel2_Paint;
+            // 
+            // panel3
+            // 
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(0, 485);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(598, 25);
+            panel3.TabIndex = 35;
+            panel3.Paint += panel3_Paint;
+            // 
+            // panel4
+            // 
+            panel4.Dock = DockStyle.Left;
+            panel4.Location = new Point(0, 25);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(25, 460);
+            panel4.TabIndex = 36;
+            panel4.Paint += panel4_Paint;
+            // 
+            // panel5
+            // 
+            panel5.Dock = DockStyle.Top;
+            panel5.Location = new Point(25, 25);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(573, 10);
+            panel5.TabIndex = 37;
+            panel5.Paint += panel5_Paint;
+            // 
+            // panel6
+            // 
+            panel6.Dock = DockStyle.Bottom;
+            panel6.Location = new Point(25, 475);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(573, 10);
+            panel6.TabIndex = 38;
+            panel6.Paint += panel6_Paint;
+            // 
             // ProductoEscogido11
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(712, 600);
+            ClientSize = new Size(623, 510);
+            Controls.Add(panel6);
+            Controls.Add(panel5);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(button2);
             Controls.Add(button3);
             Controls.Add(label3);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "ProductoEscogido11";
             Text = "ProductoEscogido11";
             Load += ProductoEscogido11_Load;
@@ -127,5 +188,11 @@
         private Button button2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
     }
 }

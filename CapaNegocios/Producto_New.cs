@@ -23,11 +23,15 @@ namespace CapaNegocio
             if (producto != null)
             {
                 // Retornamos la información formateada del producto
-                return $"📦 PRODUCTO ENCONTRADO\n" +
-                       $"ID: {producto.IdProducto}\n" +
-                       $"Nombre: {producto.Nombre}\n" +
-                       $"Marca: {producto.Marca}\n" +
-                       $"Precio: {producto.Precio:C}";
+                return $"🔍 PRODUCTO DETALLADO\n" +
+                       $"----------------------------\n" +
+                       $"🆔 ID      : {producto.IdProducto}\n" +
+                       $"📛 Nombre  : {producto.Nombre}\n" +
+                       $"🏷️ Marca   : {producto.Marca}\n" +
+                       $"💲 Precio  : {producto.Precio:C}\n" +
+                       $"----------------------------";
+
+
             }
             else
             {

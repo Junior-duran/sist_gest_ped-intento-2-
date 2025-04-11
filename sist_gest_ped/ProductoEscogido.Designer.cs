@@ -47,7 +47,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(215, 247);
+            label1.Location = new Point(167, 235);
             label1.Name = "label1";
             label1.Size = new Size(43, 17);
             label1.TabIndex = 0;
@@ -55,10 +55,10 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Gray;
+            button1.BackColor = Color.FromArgb(64, 64, 64);
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(193, 343);
+            button1.Location = new Point(192, 361);
             button1.Name = "button1";
             button1.Size = new Size(85, 33);
             button1.TabIndex = 1;

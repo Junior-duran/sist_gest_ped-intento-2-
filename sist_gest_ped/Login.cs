@@ -24,21 +24,29 @@ namespace sist_gest_ped
         private void btn_Login_Click(object sender, EventArgs e)
         {
 
-            string usuario = mtb_Usuario.Text.Trim();
-            string password = mtb_Password.Text;
+            try
+            {
+                string usuario = mtb_Usuario.Text.Trim();
+                string password = mtb_Password.Text;
 
-            if (VerificarCredenciales(usuario, password))
-            {
-                MessageBox.Show("Bienvenido, " + usuario, "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Aquí puedes abrir otro formulario o el menú principal
-                Menu2 form = new Menu2();
-                form.Show();
-                this.Hide(); // Ocultar el formulario de inicio de sesión
+                if (VerificarCredenciales(usuario, password))
+                {
+                    MessageBox.Show("Bienvenido, " + usuario, "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Aquí puedes abrir otro formulario o el menú principal
+                    Menu2 form = new Menu2();
+                    form.Show();
+                    this.Hide(); // Ocultar el formulario de inicio de sesión
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocurrió un error al intentar iniciar sesión:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private bool VerificarCredenciales(string usuario, string password)
@@ -60,6 +68,36 @@ namespace sist_gest_ped
                 }
             }
         }
-    }   
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            panel1.BackColor = ColorTranslator.FromHtml("#14213d");
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            panel2.BackColor = ColorTranslator.FromHtml("#14213d");
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            panel4.BackColor = ColorTranslator.FromHtml("#14213d");
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            panel3.BackColor = ColorTranslator.FromHtml("#14213d");
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            panel5.BackColor = ColorTranslator.FromHtml("#fca311");
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+            panel6.BackColor = ColorTranslator.FromHtml("#fca311");
+        }
+    }
 }
 
